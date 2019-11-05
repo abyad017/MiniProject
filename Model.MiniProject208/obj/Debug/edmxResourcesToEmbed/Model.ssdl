@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMiniProject208Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="x_addrbook">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="is_locked" Type="bit" Nullable="false" />
+    <Property Name="attempt" Type="smallint" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="abuid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="abpwd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fp_token" Type="varchar" MaxLength="100" />
+    <Property Name="fp_expired_date" Type="datetime" />
+    <Property Name="fp_counter" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" />
+    <Property Name="biodata_id" Type="bigint" />
+    <Property Name="address1" Type="varchar" MaxLength="1000" />
+    <Property Name="postal_code1" Type="varchar" MaxLength="20" />
+    <Property Name="rt1" Type="varchar" MaxLength="5" />
+    <Property Name="rw1" Type="varchar" MaxLength="5" />
+    <Property Name="kelurahan1" Type="varchar" MaxLength="100" />
+    <Property Name="kecamatan1" Type="varchar" MaxLength="100" />
+    <Property Name="region1" Type="varchar" MaxLength="100" />
+    <Property Name="address2" Type="varchar" MaxLength="1000" />
+    <Property Name="postal_code2" Type="varchar" MaxLength="20" />
+    <Property Name="rt2" Type="varchar" MaxLength="5" />
+    <Property Name="rw2" Type="varchar" MaxLength="5" />
+    <Property Name="kelurahan2" Type="varchar" MaxLength="100" />
+    <Property Name="kecamatan2" Type="varchar" MaxLength="100" />
+    <Property Name="region2" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_biodata">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="nick_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="pob" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dob" Type="date" Nullable="false" />
+    <Property Name="gender" Type="bit" Nullable="false" />
+    <Property Name="religion_id" Type="bigint" Nullable="false" />
+    <Property Name="high" Type="int" />
+    <Property Name="weights" Type="int" />
+    <Property Name="nationality" Type="varchar" MaxLength="100" />
+    <Property Name="ethnic" Type="varchar" MaxLength="50" />
+    <Property Name="hobby" Type="varchar" MaxLength="255" />
+    <Property Name="identity_type_id" Type="bigint" Nullable="false" />
+    <Property Name="identity_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="phone_number1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone_number2" Type="varchar" MaxLength="50" />
+    <Property Name="parent_phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="child_sequence" Type="varchar" MaxLength="5" />
+    <Property Name="how_many_brothers" Type="varchar" MaxLength="5" />
+    <Property Name="marital_status_id" Type="bigint" Nullable="false" />
+    <Property Name="addrbook_id" Type="bigint" />
+    <Property Name="token" Type="varchar" MaxLength="10" />
+    <Property Name="expired_token" Type="date" />
+    <Property Name="marriage_year" Type="varchar" MaxLength="10" />
+    <Property Name="company_id" Type="bigint" Nullable="false" />
+    <Property Name="is_process" Type="bit" />
+    <Property Name="is_complete" Type="bit" />
+  </EntityType>
+  <EntityType Name="x_catatan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="100" />
+    <Property Name="note_type_id" Type="bigint" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_certification_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_client">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="user_client_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ero" Type="bigint" Nullable="false" />
+    <Property Name="user_email" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_education_level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="is_idle" Type="bit" />
+    <Property Name="is_ero" Type="bit" />
+    <Property Name="is_user_client" Type="bit" />
+    <Property Name="ero_email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_employee_leave">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="employee_id" Type="bigint" Nullable="false" />
+    <Property Name="regular_quota" Type="int" Nullable="false" />
+    <Property Name="annual_collective_leave" Type="int" Nullable="false" />
+    <Property Name="leave_already_taken" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_employee_training">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="employee_id" Type="bigint" Nullable="false" />
+    <Property Name="training_id" Type="bigint" Nullable="false" />
+    <Property Name="training_organizer_id" Type="bigint" />
+    <Property Name="training_date" Type="datetime" />
+    <Property Name="training_type_id" Type="bigint" />
+    <Property Name="certification_type_id" Type="bigint" />
+    <Property Name="status" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_identity_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="created_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_keahlian">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="skill_name" Type="varchar" MaxLength="100" />
+    <Property Name="skill_level_id" Type="bigint" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_leave_name">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="leave_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="notes" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_leave_request">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="leave_name_id" Type="bigint" />
+    <Property Name="start" Type="date" Nullable="false" />
+    <Property Name="end_" Type="date" Nullable="false" />
+    <Property Name="reason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="leave_contact" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="leave_address" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_marital_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="created_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_menu_access">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="menutree_id" Type="bigint" Nullable="false" />
+    <Property Name="role_id" Type="bigint" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_menutree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="menu_image_url" Type="varchar" MaxLength="100" />
+    <Property Name="menu_icon" Type="varchar" MaxLength="100" />
+    <Property Name="menu_order" Type="int" Nullable="false" />
+    <Property Name="menu_level" Type="int" Nullable="false" />
+    <Property Name="menu_parent" Type="bigint" />
+    <Property Name="menu_url" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="menu_type" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_note_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modify_by" Type="bigint" />
+    <Property Name="modify_on" Type="datetime" />
+    <Property Name="delete_by" Type="bigint" />
+    <Property Name="delete_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_organisasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="position" Type="varchar" MaxLength="100" />
+    <Property Name="entry_year" Type="varchar" MaxLength="10" />
+    <Property Name="exit_year" Type="varchar" MaxLength="10" />
+    <Property Name="responsibility" Type="varchar" MaxLength="100" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_placement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="client_id" Type="bigint" Nullable="false" />
+    <Property Name="employee_id" Type="bigint" Nullable="false" />
+    <Property Name="is_placement_active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_religion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_rencana_jadwal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="schedule_code" Type="varchar" MaxLength="20" />
+    <Property Name="schedule_date" Type="date" />
+    <Property Name="time" Type="varchar" MaxLength="10" />
+    <Property Name="ro" Type="bigint" />
+    <Property Name="tro" Type="bigint" />
+    <Property Name="schedule_type_id" Type="bigint" />
+    <Property Name="location" Type="varchar" MaxLength="100" />
+    <Property Name="other_ro_tro" Type="varchar" MaxLength="100" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+    <Property Name="is_automatic_mail" Type="bit" />
+    <Property Name="sent_date" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="x_rencana_jadwal_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="rencana_jadwal_id" Type="bigint" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pekerjaan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="100" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="join_year" Type="varchar" MaxLength="10" />
+    <Property Name="join_month" Type="varchar" MaxLength="10" />
+    <Property Name="resign_year" Type="varchar" MaxLength="10" />
+    <Property Name="resign_month" Type="varchar" MaxLength="10" />
+    <Property Name="last_position" Type="varchar" MaxLength="100" />
+    <Property Name="income" Type="varchar" MaxLength="20" />
+    <Property Name="is_it_related" Type="bit" />
+    <Property Name="about_job" Type="varchar" MaxLength="1000" />
+    <Property Name="exit_reason" Type="varchar" MaxLength="500" />
+    <Property Name="notes" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pelatihan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="training_name" Type="varchar" MaxLength="100" />
+    <Property Name="organizer" Type="varchar" MaxLength="50" />
+    <Property Name="training_year" Type="varchar" MaxLength="10" />
+    <Property Name="training_month" Type="varchar" MaxLength="10" />
+    <Property Name="training_duration" Type="int" />
+    <Property Name="time_period_id" Type="bigint" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pendidikan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" />
+    <Property Name="school_name" Type="varchar" MaxLength="100" />
+    <Property Name="major" Type="varchar" MaxLength="100" />
+    <Property Name="create_by" Type="bigint" />
+    <Property Name="created_on" Type="datetime" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" />
+    <Property Name="city" Type="nchar" MaxLength="50" />
+    <Property Name="country" Type="nchar" MaxLength="50" />
+    <Property Name="education_level_id" Type="bigint" />
+    <Property Name="entry_year" Type="nchar" MaxLength="10" />
+    <Property Name="graduation_year" Type="nchar" MaxLength="10" />
+    <Property Name="gpa" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="notes" Type="nchar" MaxLength="1000" />
+    <Property Name="order" Type="int" />
+    <Property Name="judul_ta" Type="nchar" MaxLength="255" />
+    <Property Name="deskripsi_ta" Type="nchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="x_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_schedule_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="descripton" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_sertifikasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="certificate_name" Type="varchar" MaxLength="200" />
+    <Property Name="publisher" Type="varchar" MaxLength="100" />
+    <Property Name="valid_start_year" Type="varchar" MaxLength="10" />
+    <Property Name="valid_start_month" Type="varchar" MaxLength="10" />
+    <Property Name="until_year" Type="varchar" MaxLength="10" />
+    <Property Name="until_month" Type="varchar" MaxLength="10" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_skill_level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_sumber_loker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="vacancy_source" Type="varchar" MaxLength="20" />
+    <Property Name="candidate_type" Type="varchar" MaxLength="10" />
+    <Property Name="event_name" Type="varchar" MaxLength="100" />
+    <Property Name="career_center_name" Type="varchar" MaxLength="100" />
+    <Property Name="referrer_name" Type="varchar" MaxLength="100" />
+    <Property Name="referrer_phone" Type="varchar" MaxLength="20" />
+    <Property Name="referrer_email" Type="varchar" MaxLength="100" />
+    <Property Name="other_source" Type="varchar" MaxLength="100" />
+    <Property Name="last_income" Type="varchar" MaxLength="20" />
+    <Property Name="apply_date" Type="date" />
+  </EntityType>
+  <EntityType Name="x_time_period">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="x_timesheet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="placement_id" Type="bigint" Nullable="false" />
+    <Property Name="timesheet_date" Type="datetime" Nullable="false" />
+    <Property Name="start" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="end" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="overtime" Type="bit" />
+    <Property Name="start_ot" Type="varchar" MaxLength="5" />
+    <Property Name="end_ot" Type="varchar" MaxLength="5" />
+    <Property Name="activity" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="user_approval" Type="varchar" MaxLength="50" />
+    <Property Name="submitted_on" Type="datetime" Nullable="false" />
+    <Property Name="approved_on" Type="datetime" />
+    <Property Name="ero_status" Type="varchar" MaxLength="50" />
+    <Property Name="sent_on" Type="datetime" />
+    <Property Name="collected_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="x_timesheet_assessment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="year" Type="int" Nullable="false" />
+    <Property Name="month" Type="int" Nullable="false" />
+    <Property Name="placement_id" Type="bigint" Nullable="false" />
+    <Property Name="target_result" Type="int" Nullable="false" />
+    <Property Name="competency" Type="int" Nullable="false" />
+    <Property Name="discipline" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_training">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_training_organizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="notes" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_training_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_undangan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="schedule_type_id" Type="bigint" />
+    <Property Name="invitation_date" Type="date" />
+    <Property Name="invitation_code" Type="varchar" MaxLength="20" />
+    <Property Name="time" Type="varchar" MaxLength="10" />
+    <Property Name="ro" Type="bigint" />
+    <Property Name="tro" Type="bigint" />
+    <Property Name="other_ro_tro" Type="varchar" MaxLength="100" />
+    <Property Name="location" Type="varchar" MaxLength="100" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="x_undangan_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="undangan_id" Type="bigint" Nullable="false" />
+    <Property Name="biodata_id" Type="bigint" Nullable="false" />
+    <Property Name="notes" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="x_userrole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created_by" Type="bigint" Nullable="false" />
+    <Property Name="created_on" Type="datetime" Nullable="false" />
+    <Property Name="modified_by" Type="bigint" />
+    <Property Name="modified_on" Type="datetime" />
+    <Property Name="deleted_by" Type="bigint" />
+    <Property Name="deleted_on" Type="datetime" />
+    <Property Name="is_delete" Type="bit" Nullable="false" />
+    <Property Name="addrbook_id" Type="bigint" Nullable="false" />
+    <Property Name="role_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBMiniProject208ModelStoreContainer">
+    <EntitySet Name="x_addrbook" EntityType="Self.x_addrbook" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_address" EntityType="Self.x_address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_biodata" EntityType="Self.x_biodata" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_catatan" EntityType="Self.x_catatan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_certification_type" EntityType="Self.x_certification_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_client" EntityType="Self.x_client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_education_level" EntityType="Self.x_education_level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_employee" EntityType="Self.x_employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_employee_leave" EntityType="Self.x_employee_leave" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_employee_training" EntityType="Self.x_employee_training" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_identity_type" EntityType="Self.x_identity_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_keahlian" EntityType="Self.x_keahlian" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_leave_name" EntityType="Self.x_leave_name" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_leave_request" EntityType="Self.x_leave_request" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_marital_status" EntityType="Self.x_marital_status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_menu_access" EntityType="Self.x_menu_access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_menutree" EntityType="Self.x_menutree" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_note_type" EntityType="Self.x_note_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_organisasi" EntityType="Self.x_organisasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_placement" EntityType="Self.x_placement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_religion" EntityType="Self.x_religion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_rencana_jadwal" EntityType="Self.x_rencana_jadwal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_rencana_jadwal_detail" EntityType="Self.x_rencana_jadwal_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_riwayat_pekerjaan" EntityType="Self.x_riwayat_pekerjaan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_riwayat_pelatihan" EntityType="Self.x_riwayat_pelatihan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_riwayat_pendidikan" EntityType="Self.x_riwayat_pendidikan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_role" EntityType="Self.x_role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_schedule_type" EntityType="Self.x_schedule_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_sertifikasi" EntityType="Self.x_sertifikasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_skill_level" EntityType="Self.x_skill_level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_sumber_loker" EntityType="Self.x_sumber_loker" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_time_period" EntityType="Self.x_time_period" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_timesheet" EntityType="Self.x_timesheet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_timesheet_assessment" EntityType="Self.x_timesheet_assessment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_training" EntityType="Self.x_training" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_training_organizer" EntityType="Self.x_training_organizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_training_type" EntityType="Self.x_training_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_undangan" EntityType="Self.x_undangan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_undangan_detail" EntityType="Self.x_undangan_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="x_userrole" EntityType="Self.x_userrole" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

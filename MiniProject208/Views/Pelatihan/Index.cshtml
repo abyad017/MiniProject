@@ -1,0 +1,187 @@
+﻿@model List<ViewModel.MiniProject208.VMPelatihan>
+@{
+    ViewBag.Title = "Index";
+    ViewBag.bio = 0;
+     Layout = "~/Views/Shared/_Layout.cshtml";
+    var no = 1;
+}
+
+<h4>
+    <font color="000066" face="Arial"><strong>Pelatihan</strong></font>
+    <button type="button" id="btnCreate" class="btn btn-noline" data-toggle="modal" data-target="#exampleModal">
+        <span class="fas fa-plus-circle" style="color:#000000"></span>
+    </button>
+    <input type="hidden" value="@ViewBag.bio" id="bioid" name="bioid" />
+    <button type="button" id="btnDetail" class="btn btn-noline">
+        <a href="@Url.Action("getdata", "Pelatihan", new {bioid = ViewBag.bio})"><span class="fas fa-bars" style="color:#000000"></span></a>
+    </button>
+</h4>
+
+
+
+<table class="table">
+
+    <tr>
+        <th class="col-xs-3"><font size="2" color="000066">PELATIHAN/WORKSHOP</font></th>
+        <th class="col-xs-3"><font size="2" color="000066">PENYELENGGARA</font></th>
+        <th class="col-xs-2"><font size="2" color="000066">WAKTU</font></th>
+        <th class="col-xs-2"><font size="2" color="000066">DURASI</font></th>
+        <th class="col-xs-2"><font size="2" color="000066">#</font></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td class="col-xs-3"><font size="2" color="000066">@item.training_name</font></td>
+            <td class="col-xs-3"><font size="2" color="000066">@item.organizer</font></td>
+            <td class="col-xs-2"><font size="2" color="000066">@item.training_year-@item.training_month</font></td>
+            <td class="col-xs-2"><font size="2" color="000066">@item.training_duration @item.name</font></td>
+            <td>
+
+                <div class="dropdown mr-1">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-97,0">
+                        <strong> More</strong>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="padding-left:5%">
+                        <button class="dropdown-item btn-group clsBtnEdit" editid1="@item.id" data-toggle="modal" data-target="#exampleModal1">Ubah</button>
+                        <button class="dropdown-item btn-group clsBtnDelete" delid1="@item.id" data-toggle="modal" data-target="#exampleModalEdit">Hapus</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        no++;
+    }
+
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#000066">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="ffffff">Tambah Pelatihan</font></h5>
+                <button type="button" class="close" font color="ffffff" data-dismiss="modal" style="margin-top:-20px;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Edit-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#000066">
+                <h5 class="modal-title" id="exampleModal1Label"><font color="ffffff">Tambah Pelatihan</font></h5>
+                <button type="button" class="close" font color="ffffff" data-dismiss="modal" style="margin-top:-40px;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal1">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:100%">
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalEditLabel"><font color="ffffff">Hapus Organisasi?</font></h5>
+                <button type="button" class="close" font color="ffffff" data-dismiss="modal" style="margin-top:-40px;" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body" id="idBodyModaledit">
+                <div class="form-row">
+                    <img src="~/Content/Keranjang_sampah.png" width="100" height="100" align="left" id="deleteimg" />
+                    <font size="3" color="000066" face="Arial">Anda yakin ingin menghapus organisasi ini?</font>
+                </div>
+                <div class="btn-group" style="float:right">
+                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary " id="del" yesid=font size="2" style="margin-top:-30px;">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        var iddel = 0;
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/Pelatihan/Create/",
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+
+                }
+            })
+
+        });
+
+        $(".clsBtnEdit").click(function () {
+            var a = $(this).attr('editid1');
+
+            $.ajax({
+                url: "/Pelatihan/Edit/",
+                data: { editid1: a },
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal1").empty();
+                    $("#idBodyModal1").html(md1);
+                    $("#exampleModal1").modal("show");
+                }
+            })
+        });
+
+        $(".clsBtnDelete").click(function () {
+            var a = $(this).attr('delid1');
+            iddel = a;
+       
+            $("#exampleModalEdit").modal("show");
+
+
+        });
+        $("#del").click(function () {
+            //var kode_pegawai = $(this).attr('Kode_Pegawai');
+            var a = iddel;
+          
+                $.ajax({
+                    url: "/Pelatihan/Delete/",
+                    data: { delid1: a },
+                    method: "post",
+                    success: function (md1) {
+                        if (md1.Hapus = "Berhasil") {
+                            window.location.reload();
+                        }
+                        else {
+
+                            window.location.reload();
+                        }
+                    }
+                })
+
+        });
+    });
+
+
+</script>

@@ -1,0 +1,68 @@
+﻿@model Model.MiniProject208.x_sertifikasi
+@using (Html.BeginForm("EditPost", "Sertifikasi", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.id)//untuk mendapatkan id dan tidak di tampilkan di index
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Nama Sertifikasi*</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="sertificate_name" name="certificate_name" required oninvalid="this.setCustomValidity('Nama Sertifikat Tidak Boleh Kosong')" oninput="setCustomValidity('')" value="@Model.certificate_name" />
+
+            <div class="form-row" style="margin-top:10px">
+                <div class="form-group col-md-6">
+
+                    <lable for="skill_name"><font size="2px" color="#000066">Berlaku Mulai</font></lable>
+                   @Html.DropDownList("valid_start_month", new SelectList(ViewBag.ListBulan, "Value", "Text", "--Pilih--"),
+                    new { @class = "form-control", @style = " border-color:#000066;" })
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    @Html.DropDownList("valid_start_year", new SelectList(ViewBag.ListTahun, "Text", "Text", "--Pilih--"),
+                   new { @class = "form-control", @style = "margin-top:18px; border-color:#000066;", @disable = "true" })
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Penerbit*</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="publisher" name="publisher" required oninvalid="this.setCustomValidity('Penerbit Tidak Boleh Kosong')" oninput="setCustomValidity('')" value="@Model.publisher"/>
+
+
+            <div class="form-row" style="margin-top:10px">
+                <div class="form-group col-md-6">
+
+                    <lable for="skill_name"><font size="2px" color="#000066">Berlaku Sampai</font></lable>
+                    @Html.DropDownList("until_month", new SelectList(ViewBag.ListBulan, "Value", "Text", "--Pilih--"),
+                    new { @class = "form-control", @style = " border-color:#000066;" })
+
+                </div>
+
+                <div class="form-group col-md-6">
+
+                    @Html.DropDownList("until_year", new SelectList(ViewBag.ListTahun, "Text", "Text", "--Pilih--"),
+                   new { @class = "form-control", @style = "margin-top:18px; border-color:#000066;", @disable = "true" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-12" style="margin-top:-20px;">
+            <lable for="notes"><font size="2px" color="#000066">Catatan</font></lable>
+            <input class="form-control" style="border-color:#000066; width:100% !;" type="textarea" id="notes" name="notes" value="@Model.notes"/>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="btn-group" style="padding-left:300px;">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+    </div>
+}
+
+

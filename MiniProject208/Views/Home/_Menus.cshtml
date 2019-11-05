@@ -1,0 +1,50 @@
+﻿
+@{
+    List<ViewModel.MiniProject208.VMAccess> menubar = new List<ViewModel.MiniProject208.VMAccess>();
+    menubar = MiniProject208.Controllers.HomeController.getAccess();
+}
+
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <div class="container-fluid">
+        <div class="row col-12">
+            <div class="col-9">
+                @foreach (var item in menubar)
+                {
+                    <div class="dropdown" style="float:left;">
+                        @if (item.menu_type == "HEADER" && item.menu_parent == null)
+                        {
+                            <button type="button" class="btn dropdown-toggle btn-dropdown" data-toggle="dropdown">
+                                @item.title
+                            </button>
+                        }
+                        <div class="dropdown-menu">
+                            @foreach (var item2 in menubar)
+                            {
+                                if (item2.menu_type == "HEADER" && item2.menu_parent == item.menutree_id)
+                                {
+                                    <a class="dropdown-item" href="@Url.Action("index", "Religion")">@item2.title</a>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-3">
+                <div class="dropdown" style="float:right;">
+                    <button type="button" class="btn dropdown-toggle btn-dropdown" data-toggle="dropdown">
+                        <i class="fas fa-bell"></i>&ensp;Hi, @Session["name"];
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Ubah Password</a>
+                        <a class="dropdown-item" href="#">LogOut</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+

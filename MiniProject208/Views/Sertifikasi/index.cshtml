@@ -1,0 +1,162 @@
+﻿@model List<Model.MiniProject208.x_sertifikasi>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.biodata_id = 1; //dami
+}
+
+<font size="5px" color="navy">
+    <b>Sertifikasi</b><button type="button" id="btnCreate" class="btn btn-noline" style="padding-right:5px; padding-left:5px;">
+        <i class="fas fa-plus-circle" style="font-size:19px;"></i>
+    </button>
+</font>
+
+@using (Html.BeginForm("getData", "Sertifikasi", FormMethod.Post))
+{
+    <input type="number" id="cari" class="form-control" name="cari2" width="10%">
+}
+<hr style="border-color:#000066; border-width:2px;">
+
+<table align="center" class="table table-striped" style="color:#007bff; font-weight:bold;">
+    <thead>
+        <tr>
+            <th style="padding-bottom:20px; font-size:16px;">NAMA SERTIFIKASI</th>
+            <th style="padding-bottom:20px; font-size:16px;">PENERBIT</th>
+            <th style="padding-bottom:20px; font-size:16px;">MASA BERLAKU SERTIFIKASI</th>
+            <th style="padding-bottom:20px; font-size:16px;">#</th>
+        </tr>
+    </thead>
+    <tbody style="border-top:3px solid #000066;">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;" id="certificate_name">@item.certificate_name</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.publisher</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.valid_start_year - @item.valid_start_month s.d @item.until_year - @item.until_month</td>
+                <td style="border-top:1px solid #000066;">
+                    <div class="btn-group" role="group">
+                        <button id="btnOpsi" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item clsBtnEdit" id="@item.id">Ubah</a>
+                            <a class="dropdown-item clsBtnHidden" id="@item.id">Hapus</a>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+<!-- Modal Create-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="width:500px;">
+            <div class="modal-header" style="background-color:#000066;">
+                <h5 class="modal-title" id="exampleModalLabel" style="color:white; font-size:18px;">Keahlian</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top:-25px; hover:red;">
+                    <i class="fa fa-window-close" style="font-size:25px; color:white;"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                <h1> . . .  </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:100%">
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalEditLabel"><font color="ffffff">Hapus Sertifikasi?</font></h5>
+
+            </div>
+            <div class="modal-body" id="idBodyModaledit">
+                <div class="form-row">
+                    <i class="fas fa-trash" style="font-size: 70px; color:#a80000; padding-right: 30px;"></i>
+
+                    <font size="3" color="#a80000" face="Arial">Anda yakin ingin menghapus Sertifikasi?</font>
+                </div>
+                <br /><br />
+                <div class="btn-group" style="float:right;">
+                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+                    <button type="submit" class="btn btn-secondary " id="delet" yesid=font size="2" style="margin-top:-30px; background-color:#a80000; ">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/Sertifikasi/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(mdl);
+                    $("#exampleModal").modal("show");
+                }
+            });
+
+        });
+    });
+
+    $(".clsBtnEdit").click(function () {
+        var id = $(this).attr('id');
+        debugger;
+        $.ajax({
+            url: "/Sertifikasi/Edit/",
+            data: { id: id },
+            method: "get",
+            success: function (mdl) {
+                debugger;
+                $("#idBodyModal").empty();
+                $("#idBodyModal").html(mdl);
+                $("#exampleModal").modal("show");
+            }
+        })
+
+    });
+
+    $(document).ready(function () {
+        var iddel = 0;
+        $(".clsBtnHidden").click(function () {
+            var a = $(this).attr('id');
+            iddel = a;
+            debugger;
+            $("#exampleModalEdit").modal("show");
+        });
+        $("#delet").click(function () {
+            var a = iddel;
+            debugger;
+            $.ajax({
+                url: "/sertifikasi/hiddenPost/",
+                data: { id: a },
+                method: "post",
+                success: function (md1) {
+                    if (md1.Hapus = "Berhasil") {
+                        window.location.reload();
+                    }
+                    else {
+                        window.location.reload();
+                    }
+                }
+            })
+        });
+    });
+
+</script>

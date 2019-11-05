@@ -1,0 +1,39 @@
+﻿@{
+    List<ViewModel.MiniProject208.VMAccess> menubar = new List<ViewModel.MiniProject208.VMAccess>();
+    menubar = MiniProject208.Controllers.HomeController.getAccess();
+}
+
+<div class="sidenav col-3" style="float:left;">
+    <ul style="list-style-type:none">
+    @foreach (var item in menubar)
+    {
+        <li class="dd">
+            @if (item.menu_type == "NAVBAR" && item.menu_parent == null)
+            {
+            <a>@item.title</a>
+            }
+            <ul class="child" style="list-style-type:none;">
+                @foreach (var item2 in menubar)
+                {
+                    if (item2.menu_type == "NAVBAR" && item2.menu_parent == item.menutree_id)
+                    {
+                        <li><a>@item2.title</a></li>
+                    }
+                }
+            </ul>
+        </li>
+    }
+</ul>
+   
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".child").hide();
+        $(".dd").click(function () {           
+            $(this).find("ul").slideToggle();
+            $(this).find("ul").show();
+        });
+        });
+</script>

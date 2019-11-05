@@ -1,0 +1,225 @@
+﻿
+@model List<ViewModel.MiniProject208.VMPelamar>
+@{
+    ViewBag.Title = "Index";
+    string cari = ViewBag.cari;
+    var no = 1;
+}
+@*<h2>Barang</h2>
+    <button type="button" id="btnCreate" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <span class="glyphicon glyphicon-plus"></span>  Tambah
+    </button>*@
+<br />
+@using (Html.BeginForm("Search", "Reshedule", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-7" style="float:left !important;">
+            <h4 style="color:#000066; font-weight:bold;"><font>Jadwalkan Ulang</font></h4>
+        </div>
+
+        <div class="col-5" style="float:right !important;">
+            <button id="btnDetail" class="btn btn-noline" style="float:right !important;">
+                <i class="fas fa-align-justify" style="font-size:20px;"></i>
+            </button>
+            <button id="btnSort" class="btn btn-noline" style="float:right !important;">
+                <i class="fas fa-sort-alpha-up" style="font-size:20px;"></i>
+            </button>
+        </div>
+
+        <div class="col-12">
+            <hr style="border:1px solid #000066;" />
+        </div>
+
+    </div>
+}
+</br>
+@using (Html.BeginForm("Search", "Reschedule", FormMethod.Post))
+{
+    <div class="input-group col-4" style="float:left; margin-left:-15px; margin-bottom:10px; margin-top:-18px;">
+        <input class="form-control" name="KeyWord" type="search" placeholder="Cari berdasarkan nama">
+    </div>
+        <div class="input-group col-3" style="float:left;">
+            <button type="submit" class="btn btn-outline-secondary" style="margin-left:-35px; margin-top:-20px;">
+                Cari
+            </button>
+            <button type="button" class="btn btn-outline-secondary" style="margin-left:5px; margin-top:-20px;" id="reset">
+                Reset
+            </button>
+        </div>
+
+
+}
+
+<table class="table table-striped" style="color:#007bff; font-weight:bold;">
+    @*<thead>
+            <tr>
+                <th>No</th>
+                <th>Full Name</th>
+                <th>Nick Name</th>
+                <th>Email</th>
+                <th>No. Handphone</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>*@
+    @if (cari == "Loh Kok Ilang?" || cari == null)
+    {
+
+    }
+    else
+    {
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td style="border-top:1px solid #000066;">@item.invitation_code</td>
+                <td style="border-top:1px solid #000066;">@item.fullname</td>
+                <td style="border-top:1px solid #000066;">@item.school_name / @item.major</td>
+                <td style="border-top:1px solid #000066;">@item.invitation_date.Value.ToString("MMMM dd, yyyy") @item.time</td>
+
+                <td style="border-top:1px solid #000066;">
+                    <button class="btn btn-noline clsBtnDetail" idDtl="@item.id" title="Detail" data-toggle="modal" data-target="#exampleModal">
+                        <i class="nav-icon fas fa-search"></i>
+                    </button>
+
+
+                    <button class="btn btn-noline clsBtnEdit" idDtl="@item.id" title="Edit" data-toggle="modal" data-target="#exampleModal">
+                        <i class="nav-icon fas fa-sign-in-alt"></i>
+                    </button>
+
+                    <button class="btn btn-noline clsBtnDelete" idDtl="@item.id" title="Delete">
+                        <i class="nav-icon fas fa-trash"></i>
+                    </button>
+                    @*<div class="btn-group" role="group">
+                            <button id="btnOpsi" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <a class="dropdown-item" href="#">Ubah</a>
+                                <a class="dropdown-item" href="#">Hapus</a>
+                            </div>
+                        </div>*@
+                </td>
+            </tr>
+            no++;
+        }
+    </tbody>
+    }
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:600px">
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>*@
+        </div>
+    </div>
+</div>
+<!--Page-->
+<div class="row">
+    <div class="col-sm-12 col-md-5">
+        <div class="dataTables_info" id="example1_info" role="status" aria-live="polite"><font size="4px">Showing 1 to 10</font></div>
+    </div>
+    <div class="col-sm-12 col-md-2">
+        <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
+            <ul class="pagination">
+                <li class="paginate_button page-item previous disabled" id="example1_previous">
+                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link"><font size="4px">Previous</font></a>
+                </li>
+                @*<li class="paginate_button page-item active">
+                        <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link"><font size="4px">1</font></a>
+                    </li>
+                    <li class="paginate_button page-item ">
+                        <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link"><font size="4px">2</font></a>
+                    </li>
+                    <li class="paginate_button page-item ">
+                        <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link"><font size="4px">3</font></a>
+                    </li>
+                    <li class="paginate_button page-item ">
+                        <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link"><font size="4px">4</font></a>
+                    </li>
+                    <li class="paginate_button page-item">
+                        <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link"><font size="4px">5</font></a>
+                    </li>
+                    <li class="paginate_button page-item">
+                        <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link"><font size="4px">6</font></a>
+                    </li>*@
+                <li class="paginate_button page-item next" id="example1_next">
+                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link"><font size="4px">Next</font></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/Reschedule/Create/",
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+
+        });
+
+        $(".clsBtnEdit").click(function () {
+            var iddtl = $(this).attr('idDtl');
+
+
+            $.ajax({
+                url: "/Reschedule/Edit/",
+                data: { id: iddtl },
+                method: "get",
+                success: function (md1) {
+                    debugger;
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+
+        $(".clsBtnDetail").click(function () {
+            var iddtl = $(this).attr('idDtl');
+
+
+            $.ajax({
+                url: "/Undangan/Detail/",
+                data: { id: iddtl },
+                method: "get",
+                success: function (md1) {
+                    debugger;
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+
+    });
+
+    //$(function () {
+    //    $("#example1").DataTable();
+    //    $("#example2").DataTable({
+    //        "paging": true,
+    //        "lengthChange": false,
+    //        "searching": false,
+    //        "ordering": true,
+    //        "info": true,
+    //        "autoWidth": false,
+    //    });
+    //});
+
+
+</script>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - Xsis 2.0</title>
+
+    <!--BEGIN style-->
+    <link href="~/Content/bootstrapV4.3.1.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <!--END style-->
+
+    <!--BEGIN script-->
+    <script src="~/Scripts/jQuery v3.4.1.js"></script>
+    <script src="~/Scripts/popper1.14.7.js"></script>
+    <script src="~/Scripts/Bootstrap4.3.1.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!--END script-->
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--BEGIN icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--END icon-->
+</head>
+<body>
+    <!--BEGIN navbar-->
+        @Html.Partial("_Menus")
+    <!--END navbar-->
+    <!--BEGIN header-->
+    <div class="col-12 hammerhead">
+        <div class="hammerhead-text">XSIS 2.0</div>
+    </div>
+    <!--END header-->
+    <!--BEGIN container-->
+    <div class="col-12 container" style="color:#000066;">
+
+        <!--BEGIN sidenav-->
+        @*<div class="col-3 sidenav" style="float:left;">*@
+            @Html.Partial("_Side")
+        @*</div>*@
+        <!--END sidenav-->
+
+        <!--BEGIN main-->
+        <div class="col-9 main" style="float:right;">
+            @RenderBody()
+        </div>
+        <!--END main-->
+
+    </div>
+    <!--END container-->
+
+    <!--BEGIN footer-->
+    <footer>
+        <p>@DateTime.Now.Year - Xsis Mitra Utama</p>
+    </footer>
+    <!--END footer-->
+
+    <!--Modal-->
+    @Html.Partial("_ModalXl")
+
+    <!--Scripts-->
+    <script>
+        $(document).ready(function () {
+            $(".pelamar").click(function () {
+                $.ajax({
+                    url: "/Pelamar/Detail/",
+                    method: "get",
+                    success: function (mdl) {
+                        $("#idBodyModalXl").empty();
+                        $("#idBodyModalXl").html(mdl);
+                        $("#ModalXl").modal("show");
+                    }
+                });
+            });
+        });
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

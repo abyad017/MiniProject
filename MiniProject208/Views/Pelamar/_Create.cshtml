@@ -1,0 +1,583 @@
+﻿@model ViewModel.MiniProject208.VMPelamar
+@using (Html.BeginForm("Create", "Pelamar", FormMethod.Post, new { id = "idFormSimpanPelamar" }))
+{
+    @*@Html.AntiForgeryToken()*@
+
+    @*<div class="modal-header" style="background-color:#000066;">
+            <h5 class="modal-title" id="exampleModalLabel"><font color="white">Masukkan Biodata</font></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>*@
+    <form>
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="fullname"><font size="2px">Nama Lengkap*</font></label>
+                @Html.EditorFor(model => model.fullname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.fullname, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valifullname" style="display:none"><font size="2px">Nama Wajib Diisi</font></span>
+
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nick_name"><font size="2px">Nama Panggilan*</font></label>
+                @Html.EditorFor(model => model.nick_name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nick_name, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valinick_name" style="display:none"><font size="2px">Nama Panggilan Wajib Diisi</font></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="pob"><font size="2px">Tempat Lahir*</font></label>
+                @Html.EditorFor(model => model.pob, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.pob, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valipob" style="display:none"><font size="2px">Tempat Lahir Wajib Diisi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="dob"><font size="2px">Tgl Lahir*</font></label>
+                <input type="date" class="form-control" id="dob" name="dob">
+                <span class="text-danger" id="validob" style="display:none"><font size="2px">Tanggal Lahir Wajib Diisi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="gender"><font size="2px">Jenis Kelamin*</font></label>
+                <select id="gender" name="gender" class="form-control">
+                    <option value='true'>Pria</option>
+                    <option value='false'>Wanita</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="religion_id"><font size="2px">Agama*</font></label>
+                @Html.DropDownList("religion_id", new SelectList(ViewBag.ListReligion, "id", "name", "--Pilih Agama--"), new { @class = "form-control", @id = "religion_id", @name = "religion_id" })
+                <input type="hidden" class="form-control" id="religion_id" name="religion_id">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="high"><font size="2px">Tinggi(cm)*</font></label>
+                @Html.EditorFor(model => model.high, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.high, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valihigh" style="display:none"><font size="2px">Tinggi Wajib Diisi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="weights"><font size="2px">Berat(kg)*</font></label>
+                @Html.EditorFor(model => model.weights, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.weights, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valiweights" style="display:none"><font size="2px">Berat Wajib Diisi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="nationality"><font size="2px">Kewarganegaraan*</font></label>
+                @Html.EditorFor(model => model.nationality, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nationality, "", new { @class = "text-danger" })
+                <span class="text-danger" id="valinationality" style="display:none"><font size="2px">Wajib Diisi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="ethnic"><font size="2px">Suku Bangsa</font></label>
+                <input type="text" class="form-control" id="ethnic" name="ethnic">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="hobby"><font size="2px">Kegemaran/Hobi</font></label>
+                <input type="text" class="form-control" id="hobby" name="hobby">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="identity_type_id"><font size="2px">Jenis Identitas*</font></label>
+                @Html.DropDownList("identity_type_id", new SelectList(ViewBag.ListIdentity, "id", "name", "--Pilih Identitas--"), new { @class = "form-control", @id = "identity_type_id", @name = "identity_type_id" })
+                <input type="hidden" class="form-control" id="identity_type_id" name="identity_type_id">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="identity_no"><font size="2px">Nomor Identitas</font></label>
+                <input type="text" class="form-control" id="identity_no" name="identity_no">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                @*@Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <label for="email"><font size="2px">Email*</font></label>
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                <span class="text-danger" id="valiemail" style="display:none"><font size="2px">Email Sudah Terdaftar</font></span>
+
+                @*<label for="email"><font size="2px">Email*</font></label>
+                    <input type="email" class="form-control" id="email" name="email">*@
+            </div>
+            <div class="form-group col-md-3">
+                <label for="phone_number1"><font size="2px">No. HP</font></label>
+                @Html.EditorFor(model => model.phone_number1, new { htmlAttributes = new { @class = "form-control" } })
+                <span class="text-danger" id="valinohp" style="display:none"><font size="2px">No HP Sudah Terdaftar</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="phone_number2"><font size="2px">No. HP Alternatif</font></label>
+                <input type="number" class="form-control" id="phone_number2" name="phone_number2">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="parent_phone_number"><font size="2px">No.Tlp(OrangTua)*</font></label>
+                <input type="number" class="form-control" id="parent_phone_number" name="parent_phone_number">
+                <span class="text-danger" id="valiparent" style="display:none"><font size="2px">No Tlp Wajib Di Isi</font></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="child_sequence"><font size="2px">Anak - Keberapa*</font></label>
+                <input type="text" class="form-control" id="child_sequence" name="child_sequence">
+                <span class="text-danger" id="valichild" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="how_many_brothers"><font size="2px">Dari Berapa Bersaudara*</font></label>
+                <input type="text" class="form-control" id="how_many_brothers" name="how_many_brothers">
+                <span class="text-danger" id="valihow" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="marital_status_id"><font size="2px">Status Pernikahan*</font></label>
+                @Html.DropDownList("marital_status_id", new SelectList(ViewBag.ListMarital, "id", "name", "--Pilih Status--"), new { @class = "form-control", @id = "marital_status_id", @name = "marital_status_id" })
+                <input type="hidden" class="form-control" id="marital_status_id" name="marital_status_id">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="marriage_year"><font size="2px">Tahun Pernikahan</font></label>
+                <input type="text" class="form-control" id="marriage_year" name="marriage_year">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="address1"><font size="2px">Alamat*</font></label>
+                <input type="text" class="form-control" id="address1" name="address1">
+                <span class="text-danger" id="valiaddress1" style="display:none"><font size="2px">Alamat Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="address2"><font size="2px">Alamat*</font></label>
+                <input type="text" class="form-control" id="address2" name="address2">
+                <span class="text-danger" id="valiaddress2" style="display:none"><font size="2px">Alamat Wajib Di Isi</font></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="postal_code1"><font size="2px">Kode Pos</font></label>
+                <input type="text" class="form-control" id="postal_code1" name="postal_code1">
+            </div>
+            <div class="form-group col-md-1">
+                <label for="rt1"><font size="2px">RT*</font></label>
+                <input type="text" class="form-control" id="rt1" name="rt1">
+                <span class="text-danger" id="valirt1" style="display:none"><font size="2px">Wajib</font></span>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="rw1"><font size="2px">RW*</font></label>
+                <input type="text" class="form-control" id="rw1" name="rw1">
+                <span class="text-danger" id="valirw1" style="display:none"><font size="2px">Wajib</font></span>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="postal_code2"><font size="2px">Kode Pos</font></label>
+                <input type="text" class="form-control" id="postal_code2" name="postal_code2">
+            </div>
+            <div class="form-group col-md-1">
+                <label for="rt2"><font size="2px">RT*</font></label>
+                <input type="text" class="form-control" id="rt2" name="rt2">
+                <span class="text-danger" id="valirt2" style="display:none"><font size="2px">Wajib</font></span>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="rw2"><font size="2px">RW*</font></label>
+                <input type="text" class="form-control" id="rw2" name="rw2">
+                <span class="text-danger" id="valirw2" style="display:none"><font size="2px">Wajib</font></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="kelurahan1"><font size="2px">Kelurahan*</font></label>
+                <input type="text" class="form-control" id="kelurahan1" name="kelurahan1">
+                <span class="text-danger" id="valikelurahan1" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="kecamatan1"><font size="2px">Kecamatan*</font></label>
+                <input type="text" class="form-control" id="kecamatan1" name="kecamatan1">
+                <span class="text-danger" id="valikecamatan1" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="region1"><font size="2px">Kota*</font></label>
+                <input type="text" class="form-control" id="region1" name="region1">
+                <span class="text-danger" id="valiregion1" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="kelurahan2"><font size="2px">Kelurahan*</font></label>
+                <input type="text" class="form-control" id="kelurahan2" name="kelurahan2">
+                <span class="text-danger" id="valikelurahan2" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="kecamatan2"><font size="2px">Kecamatan*</font></label>
+                <input type="text" class="form-control" id="kecamatan2" name="kecamatan2">
+                <span class="text-danger" id="valikecamatan2" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="region2"><font size="2px">Kota*</font></label>
+                <input type="text" class="form-control" id="region2" name="region2">
+                <span class="text-danger" id="valiregion2" style="display:none"><font size="2px">Wajib Di Isi</font></span>
+            </div>
+        </div>
+
+        <div class="btn-group" style="float:right">
+            @*<input type="reset" style="background-color:#ff6a00" class="btn btn-warning" font size="2" value="Batal">*@
+            <input type="reset" style="background-color:#ff6a00" class="btn btn-warning" data-dismiss="modal" font size="2" value="Batal">
+
+            <input type="button" id="idBtnSave" class="btn btn-secondary " font size="2" value="Simpan">
+        </div>
+
+
+
+        @*<div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" id="idBtnSave" value="Create" class="btn btn-default" />
+                </div>
+            </div>*@
+    </form>
+}
+
+<script>
+
+    $(document).ready(function () {
+    });
+    $("#idBtnSave").click(function () {
+        debugger;
+        validation();
+        validationnick();
+        validationpob();
+        validationhigh();
+        validationweights();
+        validationnationality();
+        validationdob();
+        validationparent();
+        validationchild();
+        validationhow();
+        validationaddress1();
+        validationaddress2();
+        validationrt1();
+        validationrw1();
+        validationrt2();
+        validationrw2();
+        validationkelurahan1();
+        validationkecamatan1();
+        validationregion1();
+        validationkelurahan2();
+        validationkecamatan2();
+        validationregion2();
+
+        var dataForm = $("#idFormSimpanPelamar").serialize();
+        $.ajax({
+            url: '/Pelamar/Create',
+            data: dataForm,
+            method: 'post',
+            success: function (mdl) {
+                if (mdl.saveAll.includes("emailExist")) {
+                    $("#valiemail").show();
+                }
+                if (mdl.saveAll.includes("nohpExist")) {
+                    $("#valinohp").show();
+                }
+
+                if (mdl.saveAll == "Berhasil") {
+                    alert("Data Berhasil Disimpan");
+                    window.location.reload();
+                }
+
+                else {
+                    alert("Data Belum Berhasil Disimpan");
+                    //window.location.reload();
+
+                }
+            }
+        })
+    })
+
+
+    function validation() {
+        debugger;
+        var nama = $("#fullname").val();
+        if ($("#fullname").val() == "") {
+            $("#valifullname").show();
+            return false;
+        }
+        else {
+            $("#valifullname").hide();
+            return true;
+        }
+    }
+
+    function validationnick() {
+        debugger;
+        var nama = $("#nick_name").val();
+        if ($("#nick_name").val() == "") {
+            $("#valinick_name").show();
+            return false;
+        }
+        else {
+            $("#valinick_name").hide();
+            return true;
+        }
+    }
+
+    function validationpob() {
+        debugger;
+        var nama = $("#pob").val();
+        if ($("#pob").val() == "") {
+            $("#valipob").show();
+            return false;
+        }
+        else {
+            $("#valipob").hide();
+            return true;
+        }
+    }
+
+    function validationhigh() {
+        debugger;
+        var nama = $("#high").val();
+        if ($("#high").val() == "") {
+            $("#valihigh").show();
+            return false;
+        }
+        else {
+            $("#valihigh").hide();
+            return true;
+        }
+    }
+
+    function validationweights() {
+        debugger;
+        var nama = $("#weights").val();
+        if ($("#weights").val() == "") {
+            $("#valiweights").show();
+            return false;
+        }
+        else {
+            $("#valiweights").hide();
+            return true;
+        }
+    }
+
+    function validationnationality() {
+        debugger;
+        var nama = $("#nationality").val();
+        if ($("#nationality").val() == "") {
+            $("#valinationality").show();
+            return false;
+        }
+        else {
+            $("#valinationality").hide();
+            return true;
+        }
+    }
+
+    function validationdob() {
+        debugger;
+        var nama = $("#dob").val();
+        if ($("#dob").val() == "") {
+            $("#validob").show();
+            return false;
+        }
+        else {
+            $("#validob").hide();
+            return true;
+        }
+    }
+
+    function validationparent() {
+        debugger;
+        var nama = $("#parent_phone_number").val();
+        if ($("#parent_phone_number").val() == "") {
+            $("#valiparent").show();
+            return false;
+        }
+        else {
+            $("#valiparent").hide();
+            return true;
+        }
+    }
+
+    function validationchild() {
+        debugger;
+        var nama = $("#child_sequence").val();
+        if ($("#child_sequence").val() == "") {
+            $("#valichild").show();
+            return false;
+        }
+        else {
+            $("#valichild").hide();
+            return true;
+        }
+    }
+
+    function validationhow() {
+        debugger;
+        var nama = $("#how_many_brothers").val();
+        if ($("#how_many_brothers").val() == "") {
+            $("#valihow").show();
+            return false;
+        }
+        else {
+            $("#valihow").hide();
+            return true;
+        }
+    }
+
+    function validationaddress1() {
+        debugger;
+        var nama = $("#address1").val();
+        if ($("#address1").val() == "") {
+            $("#valiaddress1").show();
+            return false;
+        }
+        else {
+            $("#valiaddress1").hide();
+            return true;
+        }
+    }
+
+    function validationaddress2() {
+        debugger;
+        var nama = $("#address2").val();
+        if ($("#address2").val() == "") {
+            $("#valiaddress2").show();
+            return false;
+        }
+        else {
+            $("#valiaddress2").hide();
+            return true;
+        }
+    }
+
+    function validationrt1() {
+        debugger;
+        var nama = $("#rt1").val();
+        if ($("#rt1").val() == "") {
+            $("#valirt1").show();
+            return false;
+        }
+        else {
+            $("#valirt1").hide();
+            return true;
+        }
+    }
+
+    function validationrw1() {
+        debugger;
+        var nama = $("#rw1").val();
+        if ($("#rw1").val() == "") {
+            $("#valirw1").show();
+            return false;
+        }
+        else {
+            $("#valirw1").hide();
+            return true;
+        }
+    }
+
+    function validationrt2() {
+        debugger;
+        var nama = $("#rt2").val();
+        if ($("#rt2").val() == "") {
+            $("#valirt2").show();
+            return false;
+        }
+        else {
+            $("#valirt2").hide();
+            return true;
+        }
+    }
+
+    function validationrw2() {
+        debugger;
+        var nama = $("#rw2").val();
+        if ($("#rw2").val() == "") {
+            $("#valirw2").show();
+            return false;
+        }
+        else {
+            $("#valirw2").hide();
+            return true;
+        }
+    }
+
+    function validationkelurahan1() {
+        debugger;
+        var nama = $("#kelurahan1").val();
+        if ($("#kelurahan1").val() == "") {
+            $("#valikelurahan1").show();
+            return false;
+        }
+        else {
+            $("#valikelurahan1").hide();
+            return true;
+        }
+    }
+
+    function validationkecamatan1() {
+        debugger;
+        var nama = $("#kecamatan1").val();
+        if ($("#kecamatan1").val() == "") {
+            $("#valikecamatan1").show();
+            return false;
+        }
+        else {
+            $("#valikecamatan1").hide();
+            return true;
+        }
+    }
+
+    function validationregion1() {
+        debugger;
+        var nama = $("#region1").val();
+        if ($("#region1").val() == "") {
+            $("#valiregion1").show();
+            return false;
+        }
+        else {
+            $("#valiregion1").hide();
+            return true;
+        }
+    }
+
+    function validationkelurahan2() {
+        debugger;
+        var nama = $("#kelurahan2").val();
+        if ($("#kelurahan2").val() == "") {
+            $("#valikelurahan2").show();
+            return false;
+        }
+        else {
+            $("#valikelurahan2").hide();
+            return true;
+        }
+    }
+
+    function validationkecamatan2() {
+        debugger;
+        var nama = $("#kecamatan2").val();
+        if ($("#kecamatan2").val() == "") {
+            $("#valikecamatan2").show();
+            return false;
+        }
+        else {
+            $("#valikecamatan2").hide();
+            return true;
+        }
+    }
+
+    function validationregion2() {
+        debugger;
+        var nama = $("#region2").val();
+        if ($("#region2").val() == "") {
+            $("#valiregion2").show();
+            return false;
+        }
+        else {
+            $("#valiregion2").hide();
+            return true;
+        }
+    }
+</script>

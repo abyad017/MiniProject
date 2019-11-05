@@ -1,0 +1,149 @@
+﻿@model List<ViewModel.MiniProject208.VMTimesheet>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="width:100%;">
+    <!--Form Search Data-->
+    @using (Html.BeginForm("Search", "TimeSheet", FormMethod.Post, new { id = "idform" }))
+    {
+        <input class="form-control col-md-3" type="date" name="dateFrom"   />
+        <input class="form-control col-md-3" type="date" name="dateTo"  style="margin-left:20px" />
+        <button type="button" class="btn btn-secondary"  title="Cari Data" id="search">
+            <i class="nav-icon fas fa-search"></i>
+        </button>
+    }
+
+    <!--Table Feature (Sort, Row per Page, Add Data)-->
+    @Html.Partial("_TableFeature1")
+
+    <br />
+    <hr class="garis-atas-tabel">
+</div>
+<br />
+<table class="table table-borderless">
+    <tr>
+        <th> Status</th>
+        <th> Tanggal</th>
+        <th> Client</th>
+        <th> User Approval</th>
+        <th> ERO Status</th>
+        <th> Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.status</td>
+            <td> @item.timesheet_date</td>
+            <td> @item.name</td>
+            <td> @item.user_approval</td>
+            <td> @item.ero_status</td>
+            <td>
+                @if (@item.user_approval == null || @item.user_approval == "Rejected")
+                {
+                    <button type="button" class="btn btn-secondary clsBtnEdit" Kode="@item.timesheet_id" title="Ubah Data">
+                        <i class="nav-icon fas fa-edit"></i>E
+                    </button>
+                    <button type="button" class="btn btn-secondary clsBtnDetail" Kode="@item.timesheet_id" title="Ubah Data">
+                        <i class="nav-icon fas fa-edit"></i>D
+                    </button>
+                    <button type="button" class="btn btn-secondary clsBtnHapus" Kode="@item.timesheet_id" title="Ubah Data">
+                        <i class="nav-icon fas fa-edit"></i>H
+                    </button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-secondary clsBtnDetail" Kode="@item.timesheet_id" title="Ubah Data">
+                        <i class="nav-icon fas fa-edit"></i>D
+                    </button>
+                    <button type="button" class="btn btn-secondary clsBtnHapus" Kode="@item.timesheet_id" title="Ubah Data">
+                        <i class="nav-icon fas fa-edit"></i>H
+                    </button>
+                }
+
+            </td>
+        </tr>
+    }
+    
+    
+</table>
+
+ <!-- Modal Create -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+<script>
+    $(document).ready(function () {
+        //button Tambah
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/TimeSheet/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(mdl);
+                    $("#exampleModal").modal("show");
+                }
+            });
+        });
+        //button Edit
+        $(".clsBtnEdit").click(function () {
+            var id = $(this).attr('Kode');
+            $.ajax({
+                url: "/TimeSheet/EditGet/",
+                data: { id:id },
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+        //Button Detail
+        $(".clsBtnDetail").click(function () {
+            var id = $(this).attr('Kode');
+            $.ajax({
+                url: "/TimeSheet/DetailGet/",
+                data: { id: id },
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+        //Button Delete
+        $(".clsBtnHapus").click(function () {
+            var id = $(this).attr('Kode');
+            $.ajax({
+                url: "/TimeSheet/DeleteGet/",
+                data: { id: id },
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+        //button search
+        $("#search").click(function () {
+            
+            $("#idform").submit();
+
+        });
+    });
+</script>

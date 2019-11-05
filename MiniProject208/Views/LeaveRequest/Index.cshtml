@@ -1,0 +1,214 @@
+﻿@model List<ViewModel.MiniProject208.VMLeaveRequest>
+@{
+    ViewBag.Title = "Index";
+    ViewBag.bio = 1;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var no = 1;
+}
+
+
+
+@using (Html.BeginForm("Search", "LeaveRequest", FormMethod.Post))
+{
+    <div class="input-group" style="width:50%; float: left">
+        <input type="search" class="form-control search" name="Key" placeholder="Pilih Jenis Cuti">
+            <button class="btn btn-navbar kotak" type="submit"><i class="fas fa-search"></i></button>
+        
+
+
+    </div>
+}
+
+<div class="input-group" style="width:50%; float: left">
+    <button type="button" style="float:right" id="btnCreate" class="btn btn-noline" data-toggle="modal" data-target="#exampleModal">
+        <span class="fas fa-plus-circle" style="color:#000066"></span>
+    </button>
+    
+    <button type="button" style="float:right" id="btnPage" class="btn btn-noline">
+        <span class="fas fa-bars" style="color:#000066"></span>
+    </button>
+
+    <button type="button" style="float:right" id="btnSort" class="btn btn-noline">
+        <span class="fas fa-sort" style="color:#000066"></span>
+    </button>
+
+    @*<input type="hidden" value="@ViewBag.bio" id="bioid" name="bioid" />
+    <button type="button" style="float:right" id="btnDetail" class="btn btn-noline">
+        <a href="@Url.Action("getdata", "Pelatihan", new {bioid = ViewBag.bio})"><span class="fas fa-search" style="color:#000066"></span></a>
+    </button>*@
+</div>
+<br />
+<br />
+<hr style="border-color:#000066; border-width:2px;" />
+
+<div class="modal-content">
+    <div class="modal-header" style="background-color:#000066;">
+        <h5 class="modal-title"><font color="ffffff"><strong>Data Cuti Rere</strong></font></h5>
+    </div>
+        <div class="modal-body" style="background-color:#ffffff">
+            <div class="form-row">
+                <div class="form col-md-6">
+                    <font size="2" color="000066">Previous Year leave Quota : 2</font><br />
+                    <font size="2" color="000066">Regular Leave Quota : 16</font><br />
+                    <font size="2" color="000066">Annual Collective Leave : 4</font>
+                </div>
+                <div class="form col-md-6">
+                    <font size="2" color="000066">Leave Already Taken : 4</font><br />
+                    <font size="2" color="000066">Total Leave Remaining : 10</font><br />
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<br />
+<table class="table">
+
+    <tr>
+        <th class="col-xs-2" style="border-top:1px solid #000066; border-bottom:3px solid #000066;"><font size="3" color="000066">Jenis Cuti</font></th>
+        <th class="col-xs-3" style="border-top:1px solid #000066; border-bottom:3px solid #000066;"><font size="3" color="000066">Nama Cuti</font></th>
+        <th class="col-xs-4" style="border-top:1px solid #000066;border-bottom:3px solid #000066;"><font size="3" color="000066">Tanggal Cuti</font></th>
+        <th class="col-xs-2" style="border-top:1px solid #000066; border-bottom:3px solid #000066;"><font size="3" color="000066">#</font></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td style="border-top:1px solid #000066"><font size="2" color="000066">@item.leave_type</font></td>
+            <td style="border-top:1px solid #000066"><font size="2" color="000066" >@item.name</font></td>
+            <td style="border-top:1px solid #000066"><font size="2" color="000066">@item.start.ToString("MMMM dd, yyyy") - @item.end_.ToString("MMMM dd, yyyy")</font></td>
+            <td style="border-top:1px solid #000066">
+
+                <div class="dropdown mr-1">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="-97,0">
+                        <strong> More</strong>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset" style="padding-left:5%">
+                        <button class="dropdown-item btn-block clsBtnEdit" editid3="@item.id" data-toggle="modal" data-target="#exampleModal"><font size="2" color="000066">Ubah</font></button>
+                        <button class="dropdown-item btn-block clsBtnDelete" delid3="@item.id" data-toggle="modal" data-target="#exampleModalEdit"><font size="2" color="000066">Hapus</font></button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        no++;
+    }
+
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#000066">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="ffffff">Data Cuti</font></h5>
+                <button type="button" class="close" font color="ffffff" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:100%">
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalEditLabel"><font color="ffffff">Hapus Organisasi?</font></h5>
+                <button type="button" class="close" font color="ffffff" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body" id="idBodyModaledit">
+                <div class="form-row">
+                    <img src="~/Content/Keranjang_sampah.png" width="100" height="100" align="left" id="deleteimg" />
+                    <font size="3" color="000066" face="Arial">Anda yakin ingin menghapus organisasi ini?</font>
+                </div>
+                <div class="btn-group" style="float:right">
+                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+
+                    <button type="submit" class="btn btn-secondary " id="delet" font size="2" style="margin-top:-30px;">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        var iddel = 0;
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/LeaveRequest/Create/",
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+
+                }
+            })
+
+        });
+
+        $(".clsBtnEdit").click(function () {
+            var a = $(this).attr('editid3');
+
+            $.ajax({
+                url: "/LeaveRequest/Edit/",
+                data: { editid3: a },
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+
+        $(".clsBtnDelete").click(function () {
+            var a = $(this).attr('delid3');
+            iddel = a;
+
+            $("#exampleModalEdit").modal("show");
+
+
+        });
+        $("#delet").click(function () {
+            //var kode_pegawai = $(this).attr('Kode_Pegawai');
+            var a = iddel;
+
+            $.ajax({
+                url: "/LeaveRequest/Deleted/",
+                data: { delid3: a },
+                method: "post",
+                success: function (md1) {
+                    if (md1.Hapus = "Berhasil") {
+                        window.location.reload();
+                    }
+                    else {
+
+                        window.location.reload();
+                    }
+                }
+            })
+
+        });
+
+        
+    });
+
+
+</script>

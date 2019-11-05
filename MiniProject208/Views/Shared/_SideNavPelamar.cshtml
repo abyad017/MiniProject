@@ -1,0 +1,90 @@
+﻿<a href="#Profil">
+    <font size="3"> &nbsp; Profil</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Biodata</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Pengalaman Kerja</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Pendidikan</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Pelatihan</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Sertifikasi</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Sumber Lowongan Kerja</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Organisasi</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Keluarga</font>
+</a>
+
+@*<a href="#" class="menuDetail" controller="Keahlian" page="Index">*@
+<a href="#">
+    <font size="3"> &nbsp; Keahlian</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Lain-lain</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Dokumen</font>
+</a>
+
+<a href="#" class="menuDetail" controller="Pelamar" page="Catatan">
+   <font size="3"> &nbsp; Catatan</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Aktivasi Akun</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Lihat Tes</font>
+</a>
+
+<a href="#">
+    <font size="3"> &nbsp; Hasil Tes</font>
+</a>
+
+<input type="hidden" class="abc" id="id" name="id" />
+
+<!--Scripts-->
+<script>
+    $(document).ready(function () {
+        $(".menuDetail").click(function () {
+            debugger;
+            var ID = $(".abc").val();
+            var Controller = $(this).attr('controller');
+            var PageDetail = $(this).attr('page');
+                $("div").removeClass("in");
+                $("div").removeClass("fade");
+                $("div").removeClass("modal-backdrop");
+            $.ajax({
+                url: "/" + Controller + "/" + PageDetail,
+                data: { Kode: ID },
+                method: "get",
+                success: function (mdl) {
+                    $(".detailPelamar").empty();
+                    $(".detailPelamar").html(mdl);
+                }
+            });
+        });
+    });
+</script>

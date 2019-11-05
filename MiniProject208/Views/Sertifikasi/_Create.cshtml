@@ -1,0 +1,100 @@
+﻿@using (Html.BeginForm("Create", "Sertifikasi", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Nama Sertifikasi*</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="sertificate_name" name="certificate_name" required oninvalid="this.setCustomValidity('Nama Sertifikat Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+
+            <div class="form-row" style="margin-top:10px">
+                <div class="form-group col-md-6">
+
+                    <lable for="skill_name"><font size="2px" color="#000066">Berlaku Mulai</font></lable>
+                    <select class="form-control" name="valid_start_month" id="start_month"
+                            @*required oninvalid="this.setCustomValidity('Bulan belum dipilih')"
+                            oninput="this.setCustomValidity('')"*@
+                            style="color:#090944; margin-top:4px; margin-bottom:16px;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var valid_start_month in ViewBag.ListBulan)
+                {
+                            <option value="@valid_start_month.Value">@valid_start_month.Text</option>
+
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6" style="margin-top:18px; border-color:#000066;">
+                    <select class="form-control" name="valid_start_year" " id="start_year"
+                            @*required oninvalid="this.setCustomValidity('Tahun belum dipilih')"
+                            oninput="this.setCustomValidity('')"*@
+                            style="color:#090944; margin-top:4px; margin-bottom:16px;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var valid_start_year in ViewBag.ListTahun)
+                {
+                            <option value="@valid_start_year.Text">@valid_start_year.Text</option>
+
+                        }
+                    </select>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Penerbit*</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="publisher" name="publisher" required oninvalid="this.setCustomValidity('Penerbit Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+
+
+            <div class="form-row" style="margin-top:10px">
+                <div class="form-group col-md-6">
+
+                    <lable for="skill_name"><font size="2px" color="#000066">Berlaku Mulai</font></lable>
+                    <select class="form-control" name="until_month" id="until_month"
+                            @*required oninvalid="this.setCustomValidity('Bulan belum dipilih')"
+                            oninput="this.setCustomValidity('')"*@
+                            style="color:#090944; margin-top:4px; margin-bottom:16px;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var until_month in ViewBag.ListBulan)
+                {
+                            <option value="@until_month.Value">@until_month.Text</option>
+
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6" style="margin-top:18px; border-color:#000066;">
+
+
+                    <select class="form-control" name="until_year" " id="until_year"
+                            @*required oninvalid="this.setCustomValidity('Tahun belum dipilih')"
+                            oninput="this.setCustomValidity('')"*@
+                            style="color:#090944; margin-top:4px; margin-bottom:16px;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var until_year in ViewBag.ListTahun)
+                {
+                            <option value="@until_year.Text">@until_year.Text</option>
+
+                        }
+                    </select>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group col-md-12" style="margin-top:-20px;">
+            <lable for="notes"><font size="2px" color="#000066">Catatan</font></lable>
+            <input class="form-control" style="border-color:#000066; width:100% !;" type="textarea" id="notes" name="notes" />
+
+        </div>
+    </div>
+
+
+    <div class="btn-group" style="padding-left:300px;">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+    </div>
+}

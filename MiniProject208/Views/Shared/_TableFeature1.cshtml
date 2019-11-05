@@ -1,0 +1,61 @@
+﻿<div style="width:15%; float:right;">
+    <div style="float:left;">
+        <button id="btnSort" type="button" class="btn btnSort btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-sort"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-header" style="color:#000066; margin-left:-5px;">Order</a>
+            <a class="dropdown-item" href="@Url.Action("OrderDataByAsc", "Religion")">Ascending</a>
+            <a class="dropdown-item" href="@Url.Action("OrderDataByDesc", "Religion")">Descending</a>
+        </div>
+    </div>
+
+    <div style="float:left;">
+        <button type="button" class="btn btnRowPage btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-header" style="color:#000066; margin-left:-5px;">Row per Page</a>
+            @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row10" }))
+            {
+                <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row10').submit();">
+                    <input type="hidden" id="row" name="row" value="10" />10
+                </a>
+            }
+
+            @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row20" }))
+            {
+                <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row20').submit();">
+                    <input type="hidden" id="row" name="row" value="20" />20
+                </a>
+            }
+
+            @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row30" }))
+            {
+                <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row30').submit();">
+                    <input type="hidden" id="row" name="row" value="30" />30
+                </a>
+            }
+
+            @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row40" }))
+            {
+                <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row40').submit();">
+                    <input type="hidden" id="row" name="row" value="40" />40
+                </a>
+            }
+
+            @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row50" }))
+            {
+                <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row50').submit();">
+                    <input type="hidden" id="row" name="row" value="50" />50
+                </a>
+            }
+        </div>
+    </div>
+
+    <div style="float:left;">
+        <button id="btnCreate" class="btn btn-noline" title="Agama">
+            <i class="fas fa-plus-circle"></i>
+        </button>
+    </div>
+</div>

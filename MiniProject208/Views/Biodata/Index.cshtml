@@ -1,0 +1,114 @@
+﻿@model ViewModel.MiniProject208.VMBiodata
+
+@{
+    ViewBag.Title = "Biodata";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<input type="hidden" value="@Model.idBio" id="x" />
+<button type="button" class="btn btn-primary" id="btnEdit" data-toggle="modal" data-target="#exampleModal">
+    <i class="glyphicon glyphicon-pencil"></i>
+</button>
+
+<h2>Biodata</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Nama Lengkap</th>
+        <td>:</td>
+        <td>@Model.fullname</td>
+
+    </tr>
+    <tr>
+        <th>Nama Panggilan</th>
+        <td>:</td>
+        <td>@Model.nick_name</td>
+    </tr>
+    <tr>
+        <th>Kontak</th>
+        <td>:</td>
+        <td>@Model.phone_number1</td>
+    </tr>
+    <tr>
+        <th>Tempat, Tgl. Lahir</th>
+        <td>:</td>
+        <td>@Model.pob, @Model.dob.ToString("yyyy-MM-dd")</td>
+    </tr>
+    <tr>
+        <th>Jenis Kelamin, Tinggi(cm), Berat(kg)</th>
+        <td>:</td>
+        @if (Model.gender == false)
+        {
+            <td>Pria, @Model.high, @Model.weights</td>}
+        else
+        {
+            <td>Wanita, @Model.high, @Model.weights</td>}
+    </tr>
+    <tr>
+        <th>Agama</th>
+        <td>:</td>
+        <td>@Model.NamaAgama</td>
+    </tr>
+    <tr>
+        <th>Kewarganegaraan, Suku Bangsa</th>
+        <td>:</td>
+        <td>@Model.nationality, @Model.ethnic</td>
+    </tr>
+    <tr>
+        <th>Kegemaran/Hobi</th>
+        <td>:</td>
+        <td>@Model.hobby</td>
+    </tr>
+    <tr>
+        <th>Jenis & Nomor Identitas</th>
+        <td>:</td>
+        <td>@Model.identityName - @Model.identity_no </td>
+    </tr>
+    <tr>
+        <th>Status & Tahun Pernikahan</th>
+        <td>:</td>
+        <td>@Model.status - @Model.marriage_year </td>
+    </tr>
+    @*}*@
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ubah Biodata</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="iBodyModal">
+
+            </div>
+
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>*@
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $("#btnEdit").click(function () {
+            var id = $("#x").val();
+            $.ajax({
+                url: "/Biodata/Edit/",
+                data: { num: id },
+                method: "get",
+                success: function (mdl) {
+                    $('#iBodyModal').empty();
+                    $('#iBodyModal').html(mdl);
+                    $('#exampleModal').modal("show");
+                }
+
+            })
+        });
+    });
+
+</script>

@@ -1,0 +1,95 @@
+﻿@model Model.MiniProject208.x_riwayat_pelatihan
+@using (Html.BeginForm("EditPost", "Pelatihan", FormMethod.Post))
+{
+    @Html.HiddenFor(a => a.id)//menyembunyikan id
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="training_name"><font size="2" color="000066" face="Arial">Nama (Kursus, penataran, pelatihan, workshop) *</font></label>
+                                    <input type="text" class="form-control" id="training_name" name="training_name" value="@Model.training_name" required oninvalid="this.setCustomValidity('Nama Pelatihan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="organizer"><font size="2" color="000066" face="Arial">Penyelenggara *</font></label>
+                                    <input type="text" class="form-control" id="organizer" name="organizer" value="@Model.organizer" required oninvalid="this.setCustomValidity('Nama Penyelenggara Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+                                </div>
+
+                            </div>
+                            
+                                <div class="form-row">
+                                    <div class="form col-md-3">
+                                        <label><font size="2" color="000066" face="Arial">Waktu Pelaksanaan</font></label>
+                                        <div>
+                                            <select class="form-control form-inline col-md-12" id="year" name="training_year" value="@Model.training_year"><option>--Pilih Tahun--</option></select>
+                                        </div>
+                                    </div>
+                                    <div class="form col-md-3">
+                                        <label><font size="2" color="000066" face="Arial" hidden>Waktu Pelaksanaan</font></label>
+                                        <div>
+                                            <select class="form-control form-inline col-md-12" id="month" name="training_month" value="@Model.training_month"><option>--Pilih Bulan--</option></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form col-md-3">
+                                        <label><font size="2" color="000066" face="Arial">Lama Durasi</font></label>
+                                        <input type="text" class="form-control form-inline col-md-12" id="training_duration" name="training_duration" value="@Model.training_duration" />
+                                    </div>  
+                                    <div class="form col-md-3">
+                                        <label><font size="2" color="000066" face="Arial" hidden>Lama Durasi</font></label>
+                                        @Html.DropDownList("time_period_id", new SelectList(ViewBag.Listx_time_period, "id", "name", "--Pilih--"), new { @class = "form-control form-inline col-md-12"})
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="city"><font size="2" color="000066" face="Arial">Kota</font></label>
+                                        <input type="text" class="form-control" id="city" name="city" value="@Model.city" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="country"><font size="2" color="000066" face="Arial">Negara</font></label>
+                                        <input type="text" class="form-control" id="country" name="country" value="@Model.country" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="notes"><font size="2" color="000066" face="Arial">Catatan</font></label>
+                                    <input type="text" class="form-control" id="notes" name="notes" value="@Model.notes" />
+                                </div>
+                                <div class="btn-group" style="float:right">
+                                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                                        <span aria-hidden="true">Batal</span>
+                                    </button>
+                                    <input type="submit" class="btn btn-secondary " font size="2" style="margin-top:-30px;" value="Simpan">
+                                </div>
+                                }
+
+                                <script>
+                                    $(document).ready(function () {
+                                        const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                                          "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+                                        ];
+                                        var qntYears = 12;
+                                        var selectYear = $("#year");
+                                        var selectMonth = $("#month");
+                                        var currentYear = new Date().getFullYear();
+
+                                        for (var y = 0; y < qntYears; y++) {
+                                            let date = new Date(currentYear);
+                                            var yearElem = document.createElement("option");
+                                            yearElem.value = currentYear
+                                            yearElem.textContent = currentYear;
+                                            selectYear.append(yearElem);
+                                            currentYear--;
+                                        }
+
+                                        for (var m = 0; m < 12; m++) {
+                                            let monthNum = new Date(2018, m).getMonth()
+                                            let month = monthNames[monthNum];
+                                            var monthElem = document.createElement("option");
+                                            monthElem.value = monthNum;
+                                            monthElem.textContent = month;
+                                            selectMonth.append(monthElem);
+                                        }
+                                    });
+                                </script>
+
+
+

@@ -1,0 +1,418 @@
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\EntityFramework.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\WebGrease.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\EntityFramework.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\EntityFramework.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\WebGrease.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\EntityFramework.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+D:\GitLab 208\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+D:\GitLab 208\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+D:\GitLab 208\MiniProject208\MiniProject208\bin\MiniProject208.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\EntityFramework.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\WebGrease.dll
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\EntityFramework.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+D:\GitLab 208\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+D:\GitLab 208\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+D:\GitLab 208\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+D:\GitLab 208\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\WebGrease.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+F:\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\EntityFramework.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\WebGrease.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\EntityFramework.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab_19-09-21\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\Web.MiniProject208.csprojResolveAssemblyReference.cache
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\obj\Debug\MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ApplicationInsights.config
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\csc.exe
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Collections.Immutable.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\System.Reflection.Metadata.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\vbc.exe
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\roslyn\VBCSCompiler.exe.config
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll.config
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Antlr3.Runtime.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.Web.Infrastructure.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Newtonsoft.Json.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Helpers.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Mvc.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Optimization.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Razor.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\WebGrease.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Model.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Repo.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\ViewModel.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\EntityFramework.SqlServer.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.DependencyCollector.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.Web.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.AI.WindowsServer.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.ApplicationInsights.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Helpers.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Mvc.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Optimization.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.Razor.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Deployment.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\System.Web.WebPages.Razor.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Antlr3.Runtime.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\MiniProject208\bin\Newtonsoft.Json.xml

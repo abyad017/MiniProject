@@ -1,0 +1,48 @@
+﻿@model ViewModel.MiniProject208.VMPelamar
+
+<div class="modal-header" style="background-color:silver;">
+    <h5 class="modal-title" id="exampleModalLabel">Undangan</h5>
+    <td style="border-top:1px solid #000066;"><font size="4px">@Model.invitation_code</font></td>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <font size="2" style="color:blue; ">
+            <td style="border-top:1px solid #000066;">
+                <b><p style="Margin:0px !Important;">Tanggal Undangan : @Model.invitation_date</p></b>
+                <b><p style="Margin:0px !Important;">Jam : @Model.time</p></b>
+                <b><p style="Margin:0px !Important;">Pelamar : @Model.fullname</p></b>
+                <b><p style="Margin:0px !Important;">Jenis Undangan : @Model.name</p></b>
+                <b><p style="Margin:0px !Important;">RO : @Model.name_ro</p></b>
+                <b><p style="Margin:0px !Important;">TRO : @Model.name_tro</p></b>
+                <b><p style="Margin:0px !Important;">Lokasi : @Model.location</p></b>
+                <b><p style="Margin:0px !Important;">Catatan : @Model.notes</p></b>
+
+            </td></font>
+        @*<font size="2px">Tgl Undangan : @Model.invitation_date</font>
+            <br/>
+            <font size="2px">Jam : @Model.time</font>*@
+
+
+    </div>
+    <div class="col-md-6">
+        <i class="nav-icon fas fa-envelope" style="font-size:180px"></i>
+        
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        </div>
+
+    <div class="col-md-6">
+        <div class="btn-group" style="float:right">
+            @*<input type="reset" style="background-color:#ff6a00" class="btn btn-warning" font size="2" value="Batal">*@
+            <input type="button" style="background-color:lightblue" class="btn btn-" data-dismiss="modal" font size="2" value="Ubah">
+
+            <input type="button" id="idBtnSave" class="btn btn-secondary " font size="2" value="Close">
+        </div>
+    </div>
+</div>

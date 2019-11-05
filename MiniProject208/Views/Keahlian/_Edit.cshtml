@@ -1,0 +1,26 @@
+﻿@model Model.MiniProject208.x_keahlian
+
+@using (Html.BeginForm("EditPost", "Keahlian", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.id)//untuk mendapatkan id yang tidak di tampilkan di index
+    <div class="form-group">
+        <lable for="skill_name"><font size="4px">Nama Keahlian</font></lable>
+        <input class="form-control" type="text" id="skill_name" name="skill_name" value="@Model.skill_name" />
+    </div>
+    <div class="form-group">
+        <label for="id"><font size="4px">Level Keahlian *</font></label>
+        @Html.DropDownList("skill_level_id", new SelectList(ViewBag.lstKeahlian, "id", "name", "--Pilih--"), new { @class = "form-control" })
+        @*skill_level_id yg diatas ditujukan untuk apa yg mau di simpan di database*@
+
+    </div>
+    <div class="form-group">
+        <lable for="notes"><font size="4px">Catatan</font></lable>
+        <input class="form-control" type="text" id="notes" name="notes" value="@Model.notes" />
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary" id="btnCreate">Simpan</button>
+    </div>
+
+}

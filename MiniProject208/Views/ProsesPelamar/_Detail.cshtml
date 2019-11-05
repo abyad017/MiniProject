@@ -1,0 +1,46 @@
+﻿@*@model List<ViewModel.MiniProject208.VMRencanaJadwalUndangan>*@
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" href="#penjadwalan" role="tab" data-toggle="tab">Rencana Penjadwalan</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#undangan" role="tab" data-toggle="tab">Undangan</a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane fade in active" id="penjadwalan">
+        @Html.Partial("_DetailPenjadwalan")
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="undangan">
+        @*@Html.Partial("_DetailUndangan")*@
+        @Html.Partial("_DetailPenjadwalan")
+
+
+    </div>
+
+</div>
+
+<div class="modal-footer">
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+    </div>
+</div>
+
+
+<style>
+    .tab-pane {
+        border-top: 0px !important;
+        border: 1px solid #DEE2E6;
+        font-weight: bold;
+    }
+
+    .nav-link {
+        font-weight: bold !important;
+        color: #000066 !important;
+    }
+</style>

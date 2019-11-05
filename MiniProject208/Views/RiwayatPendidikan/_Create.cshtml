@@ -1,0 +1,86 @@
+﻿@using (Html.BeginForm("Create", "RiwayatPendidikan", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+                <label for="Nama_Sekolah"><font size="2px" color="#000066">Nama Sekolah/Instansi*</font></label>
+                <input type="text" class="form-control" style="border-color:#000066; margin-bottom:16px;" id="VM_Id_Riwayat_Pendidikan" name="school_name" required oninvalid="this.setCustomValidity('Nama Sekolah Tidak Boleh Kosong')" oninput="setCustomValidity('')">
+        
+            <lable for="skill_name"><font size="2px" color="#000066">Jenjang Pendidikan*</font></lable>
+            <select class="form-control" name="education_level_id" id="employeeid"
+                    required oninvalid="this.setCustomValidity('Jenjang Pendidikan Belum Dipilih')"
+                    oninput="this.setCustomValidity('')"
+                    style="color:#090944; margin-top:4px; margin-bottom:16px;">
+                <option value="">- Pilih -</option>
+                @foreach (var jenjangpendidikan in ViewBag.lsteducationlevel)
+                {
+                    <option value="@jenjangpendidikan.id">@jenjangpendidikan.name</option>
+
+                }
+            </select>
+                    
+            <div class="form-group">
+                <label for="Jurusan"><font size="2px" color="#000066">Jurusan</font></label>
+                <input type="text" class="form-control" style="border-color:#000066;" id="VM_Jurusan" name="major">
+            </div>
+
+        </div>
+        <div class="col">
+
+            <div class="row">
+                <div class="col form-group">
+                    <label for="Kota"><font size="2px" color="#000066">Kota</font></label>
+                    <input type="text" class="form-control" style="border-color:#000066;" id="VM_Kota" name="city">
+                </div>
+                <div class="col form-group" style="margin-left:-15px;">
+                    <label for="Negara"><font size="2px" color="#000066">Negara</font></label>
+                    <input type="text" class="form-control" style="border-color:#000066;" id="VM_Negara" name="country">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col form-group">
+                    <label for="Tahun_Masuk"><font size="2px" color="#000066">Tahun Masuk</font></label>
+                    <select class="form-control" name="entry_year" id="VM_Tahun_Masuk"
+                            style="color:#090944;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var tahunmasuk in ViewBag.ListTahun)
+                        {
+                            <option value="@tahunmasuk.Text">@tahunmasuk.Text</option>
+
+                        }
+                    </select>
+
+                </div>
+                <div class="col form-group"  style="margin-left:-15px;">
+                    <label for="Tahun_Lulus"><font size="2px" color="#000066">Tahun Lulus</font></label>
+                    <select class="form-control" name="gradution_year" id="VM_Tahun_Lulus"
+                            style="color:#090944;">
+                        <option value="">- Pilih -</option>
+                        @foreach (var tahunlulus in ViewBag.ListTahun)
+                        {
+                            <option value="@tahunlulus.Text">@tahunlulus.Text</option>
+
+                        }
+                    </select>
+                    </div>
+            </div>
+            <div class="col form-group" style="margin-left:-15px;">
+                <label for="IPK"><font size="2px" color="#000066">IPK</font></label>
+                <input type="text" class="form-control" id="VM_Ipk" name="gpa" width="100%;">
+            </div>
+        </div>
+    </div>
+
+        <div class="col form-group" style="margin-top:-17px; margin-left:-10px;">
+            <label for="Catatan"><font size="2px" color="#000066">Catatan</font></label>
+            <input type="text" class="form-control" id="Catatan" name="notes">
+        </div>
+
+        <div class="btn-group" style="padding-left:300px;">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+        </div>
+}
+
+

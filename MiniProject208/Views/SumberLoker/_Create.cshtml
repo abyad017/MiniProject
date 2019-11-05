@@ -1,0 +1,101 @@
+﻿@using (Html.BeginForm("Create", "SumberLoker", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <font size="3px" color="#000066">Sumber</font>
+            <select class="form-control" id="sumber" style="border-color:#000066;" required oninvalid="this.setCustomValidity('Sumber Tidak Boleh Kosong')" oninput="setCustomValidity('')">
+                <option value="">- Pilih -</option>
+                <option value="Event">Event</option>
+                <option value="Karir Center">Karir Center</option>
+                <option value="Referrer">Referrer</option>
+                <option value="Sumber Lain">Suber Lain</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <font size="3px" color="#000066">Tipe Pelamar</font>
+            <select class="form-control" id="candidate_type" style="border-color:#000066;" required oninvalid="this.setCustomValidity('Tipe Pelamar Center Tidak Boleh Kosong')" oninput="setCustomValidity('')">
+                <option value="">- Pilih -</option>
+                <option value="Fresh Graduate">Fresh Graduate</option>
+                <option value="Experience">Experience</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <lable for="event_name"><font size="3px" color="#000066">Nama Event*</font></lable>
+        <input class="form-control" style="border-color:#000066;" type="text" id="event_name" name="event_name" disabled required oninvalid="this.setCustomValidity('Event Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+    </div>
+    <div class="form-group">
+        <lable for="career_center_name"><font size="3px" color="#000066">Nama Karir Center*</font></lable>
+        <input class="form-control" style="border-color:#000066;" type="text" id="career_center_name" name="career_center_name" disabled required oninvalid="this.setCustomValidity('Nama Karir Center Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+    </div>
+    <div class="form-group">
+        <lable for="referrer_name"><font size="3px" color="#000066">Referrer Name*</font></lable>
+        <input class="form-control" style="border-color:#000066;" type="text" id="referrer_name" name="referrer_name" disabled />
+    </div>
+        <div class="form-group">
+            <lable for="referrer_phone"><font size="3px" color="#000066">Referrer Mobile Number*</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="referrer_phone" name="referrer_phone" disabled required oninvalid="this.setCustomValidity('Nomor Telepon Referrer Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group">
+            <lable for="referrer_email"><font size="3px" color="#000066">Referrer Email</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="referrer_email" name="referrer_email" disabled required oninvalid="this.setCustomValidity('Email Referrer Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group">
+            <lable for="other_source"><font size="3px" color="#000066">Sumber Lain</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="other_source" name="other_source" disabled required oninvalid="this.setCustomValidity('Sumber Lain Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-6">
+            <lable for="apply_date"><font size="3px" color="#000066">Penghasilan Terakhir (IDR)</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="input" id="last_income" name="last_income" required oninvalid="this.setCustomValidity('Gaji Terakhir Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-6">
+            <lable for="apply_date"><font size="3px" color="#000066">Tgl. Lamaran Kerja (yyyy-mm-dd)</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="date" id="apply_date" name="apply_date" required oninvalid="this.setCustomValidity('Tanggal Lamaran Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <br>
+        <div class="btn-group" style="padding-left:300px;">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+        </div>
+}
+<script>
+    $(document).ready(function () {
+        $("#sumber").change(function () {
+            if ($("#sumber").val() == "Event") {
+                $("#event_name").attr('disabled', false);
+                $("#career_center_name").attr('disabled', true);
+                $("#referrer_name").attr('disabled', true);
+                $("#referrer_phone").attr('disabled', true);
+                $("#referrer_email").attr('disabled', true);
+                $("#other_source").attr('disabled', true);
+            }
+            else if ($("#sumber").val() == "Karir Center") {
+                $("#career_center_name").attr('disabled', false);
+                $("#event_name").attr('disabled', true);
+                $("#referrer_name").attr('disabled', true);
+                $("#referrer_phone").attr('disabled', true);
+                $("#referrer_email").attr('disabled', true);
+                $("#other_source").attr('disabled', true);
+            }
+            else if ($("#sumber").val() == "Referrer") {
+                $("#career_center_name").attr('disabled', true);
+                $("#event_name").attr('disabled', true);
+                $("#referrer_name").attr('disabled', false);
+                $("#referrer_phone").attr('disabled', false);
+                $("#referrer_email").attr('disabled', false);
+                $("#other_source").attr('disabled', true);
+            }
+            else if ($("#sumber").val() == "Sumber Lain") {
+                $("#career_center_name").attr('disabled', true);
+                $("#event_name").attr('disabled', true);
+                $("#referrer_name").attr('disabled', true);
+                $("#referrer_phone").attr('disabled', true);
+                $("#referrer_email").attr('disabled', true);
+                $("#other_source").attr('disabled', false);
+            } else {
+
+            }
+        });
+    });
+</script>
+

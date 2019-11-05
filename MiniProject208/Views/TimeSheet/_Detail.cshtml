@@ -1,0 +1,131 @@
+﻿
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel"> Detail</h5>
+
+</div>
+<table style="width:100%">
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Tanggal :</label> <br />
+                <label><b>@ViewBag.client.status</b></label> <br />
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Klien  :</label> <br />
+                <label><b>@ViewBag.client.name</b></label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Tanggal :</label> <br />
+                <label><b>@ViewBag.client.timesheet_date</b></label> <br />
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Jam Kerja :</label> <br />
+                <label><b>@ViewBag.client.start - @ViewBag.client.end</b></label>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Overtime :</label> <br />
+                <label><b>@ViewBag.x</b></label>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Jam Overtime :</label> <br />
+                <label><b>@ViewBag.client.start_ot - @ViewBag.client.end_ot</b></label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Status Persetujuan User :</label> <br />
+                <label><b>@ViewBag.client.user_approval</b></label>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Tgl. Submit  :</label> <br />
+                <label><b>@ViewBag.client.submitted_on</b></label>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>tgl. Disetujui :</label> <br />
+                <label><b>@ViewBag.client.approved_on</b></label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Status ERO :</label> <br />
+                <label><b>@ViewBag.client.ero_status</b></label>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Tgl. Kirim :</label> <br />
+                <label><b>@ViewBag.client.sent_on</b></label>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Tgl. Terima/Collect  :</label> <br />
+                <label><b>@ViewBag.client.collected_on</b></label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="form-group">
+                <label>Kegiatan</label> <br />
+                <label><b>@ViewBag.client.activity</b></label>
+            </div>
+        </td>
+        
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-warning" data-dismiss="modal" aria-label="Close">
+        close
+    </button>
+</div>
+
+
+

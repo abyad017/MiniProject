@@ -1,0 +1,294 @@
+﻿@model ViewModel.MiniProject208.VMBiodata
+@using (Html.BeginForm("EditPost", "Biodata", FormMethod.Post, new { id = "idSimpan" }))
+{
+    @Html.HiddenFor(a => a.idBio)
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="fullname">Nama Lengkap*</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" value="@Model.fullname" required oninvalid="this.setCustomValidity('Nama Lengkap Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="nick_name">Nama Panggilan</label>
+            <input type="text" class="form-control" id="nickName" name="nick_name" value="@Model.nick_name" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="pob">Tempat Lahir*</label>
+            <input type="text" class="form-control" id="pob" name="pob" value="@Model.pob" required oninvalid="this.setCustomValidity('Tempat Lahir Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="dob">Tanggal Lahir*</label>
+            <input type="date" class="form-control" id="dob" name="dob" value="@Model.dob.ToString("yyyy-MM-dd")" required oninvalid="this.setCustomValidity('Tanggal Lahir Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="gender">Jenis Kelamin</label>
+            @Html.DropDownList("gender", new SelectList(ViewBag.Gender, "gender", "ketGender"), new { @class = "form-control" })
+            @*<select id="gender" class="form-control" name="gender" >
+                <option value='true'>Wanita</option>
+                <option value='false'>Pria</option>
+                </select>*@
+        </div>
+        <div class="form-group col-md-3">
+            <label for="idAgama">Agama</label>
+            @Html.DropDownList("idAgama", new SelectList(ViewBag.ListAgama, "id", "name"), new { @class = "form-control" })
+
+            @*<input type="hidden" class="form-control" id="religionId" name="religion_id" value="@Model.NamaAgama" />*@
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="high">Tinggi Badan(cm)*</label>
+            <input type="text" class="form-control" id="high" name="high" value="@Model.high" required oninvalid="this.setCustomValidity('Tinggi Badan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="weight">Berat Badan (kg)*</label>
+            <input type="text" class="form-control" id="weight" name="weight" value="@Model.weights" required oninvalid="this.setCustomValidity('Berat Badan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="nationality">Kewarganegaraan*</label>
+            <input type="text" class="form-control" id="nationality" name="nationality" value="@Model.nationality" required oninvalid="this.setCustomValidity('Kewarganegaraan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="ethnic">Suku Bangsa</label>
+            <input type="text" class="form-control" id="ethnic" name="ethnic" value="@Model.ethnic" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="hobby">Kegemaran/Hobi</label>
+            <input type="text" class="form-control" id="high" name="high" value="@Model.hobby" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="idIden">Jenis Identitas*</label>
+            @Html.DropDownList("idIden", new SelectList(ViewBag.ListIden, "id", "name"), new { @class = "form-control" })
+            <span class="text-danger" id="validID" style="display:none"><font size="2px">Identitas Sudah Terdaftar</font></span>
+            @*<input type="hidden" class="form-control" id="identityTypeId" name="identity_type_id" value="@Model.identityName" />*@
+        </div>
+        <div class="form-group col-md-3">
+            <label for="identity_no">Nomor Identitas*</label>
+            @Html.EditorFor(model=>model.identity_no, new { htmlAttributes = new { @class = "form-control" } })
+            <span class="text-danger" id="validID" style="display:none"><font size="2px">Identitas Sudah Terdaftar</font></span>
+            
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="email"><font size="2px">Email*</font></label>
+            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+            <span class="text-danger" id="validEmail" style="display:none"><font size="2px">Email Sudah Terdaftar</font></span>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="phone_number1"><font size="2px">No. HP*</font></label>
+            @Html.EditorFor(model => model.phone_number1, new { htmlAttributes = new { @class = "form-control" } })
+            <span class="text-danger" id="validNoHP" style="display:none"><font size="2px">No HP Sudah Terdaftar</font></span>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="phone_number2">No. HP Alternatif</label>
+            <input type="text" class="form-control" id="phoneNumber2" name="phone_number2" value="@Model.phone_number2" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="parent_phone_number">No. Tlp(Rumah Orang Tua)*</label>
+            <input type="text" class="form-control" id="parentPhoneNumber" name="parent_phone_number" value="@Model.parent_phone_number" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="child_sequence">Anak Ke*</label>
+            <input type="number" class="form-control" id="childSequence" name="child_sequence" value="@Model.child_sequence" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="how_many_brothers">Dari Berapa Bersaudara*</label>
+            <input type="number" class="form-control" id="howManyBrothers" name="how_many_brothers" value="@Model.how_many_brothers" />
+        </div>
+        <div class="form-group col-md-3">
+            <label for="idStatus">Status Pernikahan</label>
+            @Html.DropDownList("idStatus", new SelectList(ViewBag.ListMarital, "id", "name", "-Pilih Status-"), new { @class = "form-control" })
+            @*<input type="hidden" class="form-control" id="maritalStatusId" name="marital_status_id" value="@Model.status" />*@
+        </div>
+        <div class="form-group col-md-3">
+            <label for="marriage_year">Tahun Pernikahan</label>
+            <input type="text" class="form-control" id="marriageYear" name="marriage_year" value="@Model.marriage_year" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <b><u>Alamat Sesuai Identitas</u></b>
+
+        </div>
+        <div class="form-group col-md-6">
+            <b><u>Alamat Sesuai Tempat Tinggal Saat Ini</u></b>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="address1">Alamat*</label>
+            <input type="text" class="form-control" id="address1" name="address1" value="@Model.address1" required oninvalid="this.setCustomValidity('Alamat Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="address2">Alamat*</label>
+            <input type="text" class="form-control" id="address2" name="address2" value="@Model.address2" required oninvalid="this.setCustomValidity('Alamat Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="postal_code1">Kode Pos</label>
+            <input type="text" class="form-control" id="postalCode1" name="postal_code1" value="@Model.postal_code1" />
+        </div>
+        <div class="form-group col-md-1">
+            <label for="rt1">RT*</label>
+            <input type="text" class="form-control" id="rt1" name="rt1" value="@Model.rt1" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-1">
+            <label for="rw1">RW*</label>
+            <input type="text" class="form-control" id="rw1" name="rw1" value="@Model.rw1" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="postal_code2">Kode Pos</label>
+            <input type="text" class="form-control" id="postalCode2" name="postal_code2" value="@Model.postal_code2" />
+        </div>
+        <div class="form-group col-md-1">
+            <label for="rt2">RT*</label>
+            <input type="text" class="form-control" id="rt2" name="rt2" value="@Model.rt2" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-1">
+            <label for="rw2">RW*</label>
+            <input type="text" class="form-control" id="rw2" name="rw2" value="@Model.rw2" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="kelurahan1">Desa/Kelurahan*</label>
+            <input type="text" class="form-control" id="kelurahan1" name="kelurahan1" value="@Model.kelurahan1" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="kecamatan1">Kecamatan*</label>
+            <input type="text" class="form-control" id="kecamatan1" name="kecamatan1" value="@Model.kecamatan1" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="region1">Kota*</label>
+            <input type="text" class="form-control" id="region1" name="region1" value="@Model.region1" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="kelurahan2">Desa/Kelurahan*</label>
+            <input type="text" class="form-control" id="kelurahan2" name="kelurahan2" value="@Model.kelurahan2" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="kecamatan2">Kecamatan*</label>
+            <input type="text" class="form-control" id="kecamatan2" name="kecamatan2" value="@Model.kecamatan2" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+        <div class="form-group col-md-2">
+            <label for="region2">Kota*</label>
+            <input type="text" class="form-control" id="region2" name="region2" value="@Model.region2" required oninvalid="this.setCustomValidity('Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <div class="btn-group">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-secondary" id="btnSave" value="Simpan">Simpan</button>
+        </div>
+    </div>
+}
+<script>
+
+    $("#btnSave").click(function () {
+        debugger;
+        var dt = $("#idSimpan").serialize();
+        $.ajax({
+            url: '/Biodata/EditPost/',
+            data: dt,
+            method: 'post',
+            success: function (md1) {
+                if (md1.simpanEdit.includes("EmailExist")) {
+                    $("#validEmail").show();
+                }
+                if (md1.simpanEdit.includes("NoHPExist")) {
+                    $("#validNoHP").show();
+                }
+                if (md1.simpanEdit.includes("IdentityExist"))
+                {
+                    $("validID").show();
+                }
+                if (md1.simpanEdit == "Berhasil") {
+                    alert("Data Berhasil Disimpan");
+                    window.location.reload();
+                }
+                else {
+                    alert("Data Belum Berhasil Disimpan");
+                }
+
+            }
+        });
+    });
+    $("#id").change(function () {
+        var agama = $("#id").val;
+        agama = agama.toString();
+        $.ajax({
+            url: '/Biodata/ListAgama/',
+            data: { biodata: agama },
+            dataType: 'json',
+            success: function (hasil) {
+                $("#id").empty();
+                $("#id").append("<option value=''>--Pilih--</option>");
+                $.each(hasil, function (Index, hasil) {
+                    $("#id").append("<option value='" + hasil.id + "'>" + hasil.name + "</option>");
+                })
+            }
+        });
+
+
+    });
+    $("#id").change(function () {
+        var identitas = $("#id").val;
+        identitas = identitas.toString();
+        $.ajax({
+            url: '/Biodata/ListIden/',
+            data: { biodata: identitas },
+            dataType: 'json',
+            success: function (hasil) {
+                $("#id").empty();
+                $("#id").append("<option value=''>--Pilih--</option>");
+                $.each(hasil, function (Index, hasil) {
+                    $("#id").append("<option value='" + hasil.id + "'>" + hasil.name + "</option>");
+                })
+            }
+        });
+    });
+    $("#id").change(function () {
+        var status = $("#id").val;
+        status = status.toString();
+        $.ajax({
+            url: '/Biodata/ListMarital/',
+            data: { biodata: status },
+            dataType: 'json',
+            success: function (hasil) {
+                $("#id").empty();
+                $("#id").append("<option value=''>--Pilih--</option>");
+                $.each(hasil, function (Index, hasil) {
+                    $("#id").append("<option value='" + hasil.id + "'>" + hasil.name + "</option>");
+                })
+            }
+        });
+    });
+    $("#gender").change(function () {
+        var jeniskelamin = $("#gender").val;
+        jeniskelamin = jeniskelamin.toString();
+        $.ajax({
+            url: '/Biodata/Gender/',
+            data: { biodata: jeniskelamin },
+            dataType: 'json',
+            success: function (hasil) {
+                $("#gender").empty();
+                $("#gender").append("<option value=''>--Pilih--</option>");
+                $.each(hasil, function (Index, hasil) {
+                    $("#gender").append("<option value='" + hasil.gender + "'>" + hasil.ketGender + "</option>");
+                })
+            }
+        });
+    });
+
+
+
+
+</script>

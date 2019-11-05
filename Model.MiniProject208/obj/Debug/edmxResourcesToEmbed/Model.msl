@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBMiniProject208ModelStoreContainer" CdmEntityContainer="DBMiniProject208Entities">
+    <EntitySetMapping Name="x_addrbook">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_addrbook">
+        <MappingFragment StoreEntitySet="x_addrbook">
+          <ScalarProperty Name="fp_counter" ColumnName="fp_counter" />
+          <ScalarProperty Name="fp_expired_date" ColumnName="fp_expired_date" />
+          <ScalarProperty Name="fp_token" ColumnName="fp_token" />
+          <ScalarProperty Name="abpwd" ColumnName="abpwd" />
+          <ScalarProperty Name="abuid" ColumnName="abuid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="attempt" ColumnName="attempt" />
+          <ScalarProperty Name="is_locked" ColumnName="is_locked" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_address">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_address">
+        <MappingFragment StoreEntitySet="x_address">
+          <ScalarProperty Name="region2" ColumnName="region2" />
+          <ScalarProperty Name="kecamatan2" ColumnName="kecamatan2" />
+          <ScalarProperty Name="kelurahan2" ColumnName="kelurahan2" />
+          <ScalarProperty Name="rw2" ColumnName="rw2" />
+          <ScalarProperty Name="rt2" ColumnName="rt2" />
+          <ScalarProperty Name="postal_code2" ColumnName="postal_code2" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="region1" ColumnName="region1" />
+          <ScalarProperty Name="kecamatan1" ColumnName="kecamatan1" />
+          <ScalarProperty Name="kelurahan1" ColumnName="kelurahan1" />
+          <ScalarProperty Name="rw1" ColumnName="rw1" />
+          <ScalarProperty Name="rt1" ColumnName="rt1" />
+          <ScalarProperty Name="postal_code1" ColumnName="postal_code1" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_biodata">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_biodata">
+        <MappingFragment StoreEntitySet="x_biodata">
+          <ScalarProperty Name="is_complete" ColumnName="is_complete" />
+          <ScalarProperty Name="is_process" ColumnName="is_process" />
+          <ScalarProperty Name="company_id" ColumnName="company_id" />
+          <ScalarProperty Name="marriage_year" ColumnName="marriage_year" />
+          <ScalarProperty Name="expired_token" ColumnName="expired_token" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="addrbook_id" ColumnName="addrbook_id" />
+          <ScalarProperty Name="marital_status_id" ColumnName="marital_status_id" />
+          <ScalarProperty Name="how_many_brothers" ColumnName="how_many_brothers" />
+          <ScalarProperty Name="child_sequence" ColumnName="child_sequence" />
+          <ScalarProperty Name="parent_phone_number" ColumnName="parent_phone_number" />
+          <ScalarProperty Name="phone_number2" ColumnName="phone_number2" />
+          <ScalarProperty Name="phone_number1" ColumnName="phone_number1" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="identity_no" ColumnName="identity_no" />
+          <ScalarProperty Name="identity_type_id" ColumnName="identity_type_id" />
+          <ScalarProperty Name="hobby" ColumnName="hobby" />
+          <ScalarProperty Name="ethnic" ColumnName="ethnic" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+          <ScalarProperty Name="weights" ColumnName="weights" />
+          <ScalarProperty Name="high" ColumnName="high" />
+          <ScalarProperty Name="religion_id" ColumnName="religion_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="pob" ColumnName="pob" />
+          <ScalarProperty Name="nick_name" ColumnName="nick_name" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_catatan">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_catatan">
+        <MappingFragment StoreEntitySet="x_catatan">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="note_type_id" ColumnName="note_type_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_certification_type">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_certification_type">
+        <MappingFragment StoreEntitySet="x_certification_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_client">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_client">
+        <MappingFragment StoreEntitySet="x_client">
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="ero" ColumnName="ero" />
+          <ScalarProperty Name="user_client_name" ColumnName="user_client_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_education_level">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_education_level">
+        <MappingFragment StoreEntitySet="x_education_level">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_employee">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_employee">
+        <MappingFragment StoreEntitySet="x_employee">
+          <ScalarProperty Name="ero_email" ColumnName="ero_email" />
+          <ScalarProperty Name="is_user_client" ColumnName="is_user_client" />
+          <ScalarProperty Name="is_ero" ColumnName="is_ero" />
+          <ScalarProperty Name="is_idle" ColumnName="is_idle" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_employee_leave">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_employee_leave">
+        <MappingFragment StoreEntitySet="x_employee_leave">
+          <ScalarProperty Name="leave_already_taken" ColumnName="leave_already_taken" />
+          <ScalarProperty Name="annual_collective_leave" ColumnName="annual_collective_leave" />
+          <ScalarProperty Name="regular_quota" ColumnName="regular_quota" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_employee_training">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_employee_training">
+        <MappingFragment StoreEntitySet="x_employee_training">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="certification_type_id" ColumnName="certification_type_id" />
+          <ScalarProperty Name="training_type_id" ColumnName="training_type_id" />
+          <ScalarProperty Name="training_date" ColumnName="training_date" />
+          <ScalarProperty Name="training_organizer_id" ColumnName="training_organizer_id" />
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_identity_type">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_identity_type">
+        <MappingFragment StoreEntitySet="x_identity_type">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_keahlian">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_keahlian">
+        <MappingFragment StoreEntitySet="x_keahlian">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="skill_level_id" ColumnName="skill_level_id" />
+          <ScalarProperty Name="skill_name" ColumnName="skill_name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_leave_name">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_leave_name">
+        <MappingFragment StoreEntitySet="x_leave_name">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="leave_type" ColumnName="leave_type" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_leave_request">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_leave_request">
+        <MappingFragment StoreEntitySet="x_leave_request">
+          <ScalarProperty Name="leave_address" ColumnName="leave_address" />
+          <ScalarProperty Name="leave_contact" ColumnName="leave_contact" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="end_" ColumnName="end_" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="leave_name_id" ColumnName="leave_name_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_marital_status">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_marital_status">
+        <MappingFragment StoreEntitySet="x_marital_status">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_menu_access">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_menu_access">
+        <MappingFragment StoreEntitySet="x_menu_access">
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="menutree_id" ColumnName="menutree_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_menutree">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_menutree">
+        <MappingFragment StoreEntitySet="x_menutree">
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="menu_type" ColumnName="menu_type" />
+          <ScalarProperty Name="menu_url" ColumnName="menu_url" />
+          <ScalarProperty Name="menu_parent" ColumnName="menu_parent" />
+          <ScalarProperty Name="menu_level" ColumnName="menu_level" />
+          <ScalarProperty Name="menu_order" ColumnName="menu_order" />
+          <ScalarProperty Name="menu_icon" ColumnName="menu_icon" />
+          <ScalarProperty Name="menu_image_url" ColumnName="menu_image_url" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_note_type">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_note_type">
+        <MappingFragment StoreEntitySet="x_note_type">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="delete_on" ColumnName="delete_on" />
+          <ScalarProperty Name="delete_by" ColumnName="delete_by" />
+          <ScalarProperty Name="modify_on" ColumnName="modify_on" />
+          <ScalarProperty Name="modify_by" ColumnName="modify_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_organisasi">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_organisasi">
+        <MappingFragment StoreEntitySet="x_organisasi">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="responsibility" ColumnName="responsibility" />
+          <ScalarProperty Name="exit_year" ColumnName="exit_year" />
+          <ScalarProperty Name="entry_year" ColumnName="entry_year" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_placement">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_placement">
+        <MappingFragment StoreEntitySet="x_placement">
+          <ScalarProperty Name="is_placement_active" ColumnName="is_placement_active" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_religion">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_religion">
+        <MappingFragment StoreEntitySet="x_religion">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_rencana_jadwal">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_rencana_jadwal">
+        <MappingFragment StoreEntitySet="x_rencana_jadwal">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="sent_date" ColumnName="sent_date" />
+          <ScalarProperty Name="is_automatic_mail" ColumnName="is_automatic_mail" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="other_ro_tro" ColumnName="other_ro_tro" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="schedule_type_id" ColumnName="schedule_type_id" />
+          <ScalarProperty Name="tro" ColumnName="tro" />
+          <ScalarProperty Name="ro" ColumnName="ro" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="schedule_date" ColumnName="schedule_date" />
+          <ScalarProperty Name="schedule_code" ColumnName="schedule_code" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_rencana_jadwal_detail">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_rencana_jadwal_detail">
+        <MappingFragment StoreEntitySet="x_rencana_jadwal_detail">
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="rencana_jadwal_id" ColumnName="rencana_jadwal_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_riwayat_pekerjaan">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_riwayat_pekerjaan">
+        <MappingFragment StoreEntitySet="x_riwayat_pekerjaan">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="exit_reason" ColumnName="exit_reason" />
+          <ScalarProperty Name="about_job" ColumnName="about_job" />
+          <ScalarProperty Name="is_it_related" ColumnName="is_it_related" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="last_position" ColumnName="last_position" />
+          <ScalarProperty Name="resign_month" ColumnName="resign_month" />
+          <ScalarProperty Name="resign_year" ColumnName="resign_year" />
+          <ScalarProperty Name="join_month" ColumnName="join_month" />
+          <ScalarProperty Name="join_year" ColumnName="join_year" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_riwayat_pelatihan">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_riwayat_pelatihan">
+        <MappingFragment StoreEntitySet="x_riwayat_pelatihan">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="time_period_id" ColumnName="time_period_id" />
+          <ScalarProperty Name="training_duration" ColumnName="training_duration" />
+          <ScalarProperty Name="training_month" ColumnName="training_month" />
+          <ScalarProperty Name="training_year" ColumnName="training_year" />
+          <ScalarProperty Name="organizer" ColumnName="organizer" />
+          <ScalarProperty Name="training_name" ColumnName="training_name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_riwayat_pendidikan">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_riwayat_pendidikan">
+        <MappingFragment StoreEntitySet="x_riwayat_pendidikan">
+          <ScalarProperty Name="deskripsi_ta" ColumnName="deskripsi_ta" />
+          <ScalarProperty Name="judul_ta" ColumnName="judul_ta" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="gpa" ColumnName="gpa" />
+          <ScalarProperty Name="graduation_year" ColumnName="graduation_year" />
+          <ScalarProperty Name="entry_year" ColumnName="entry_year" />
+          <ScalarProperty Name="education_level_id" ColumnName="education_level_id" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="create_by" ColumnName="create_by" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_role">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_role">
+        <MappingFragment StoreEntitySet="x_role">
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_schedule_type">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_schedule_type">
+        <MappingFragment StoreEntitySet="x_schedule_type">
+          <ScalarProperty Name="descripton" ColumnName="descripton" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_sertifikasi">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_sertifikasi">
+        <MappingFragment StoreEntitySet="x_sertifikasi">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="until_month" ColumnName="until_month" />
+          <ScalarProperty Name="until_year" ColumnName="until_year" />
+          <ScalarProperty Name="valid_start_month" ColumnName="valid_start_month" />
+          <ScalarProperty Name="valid_start_year" ColumnName="valid_start_year" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="certificate_name" ColumnName="certificate_name" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_skill_level">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_skill_level">
+        <MappingFragment StoreEntitySet="x_skill_level">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_sumber_loker">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_sumber_loker">
+        <MappingFragment StoreEntitySet="x_sumber_loker">
+          <ScalarProperty Name="apply_date" ColumnName="apply_date" />
+          <ScalarProperty Name="last_income" ColumnName="last_income" />
+          <ScalarProperty Name="other_source" ColumnName="other_source" />
+          <ScalarProperty Name="referrer_email" ColumnName="referrer_email" />
+          <ScalarProperty Name="referrer_phone" ColumnName="referrer_phone" />
+          <ScalarProperty Name="referrer_name" ColumnName="referrer_name" />
+          <ScalarProperty Name="career_center_name" ColumnName="career_center_name" />
+          <ScalarProperty Name="event_name" ColumnName="event_name" />
+          <ScalarProperty Name="candidate_type" ColumnName="candidate_type" />
+          <ScalarProperty Name="vacancy_source" ColumnName="vacancy_source" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_time_period">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_time_period">
+        <MappingFragment StoreEntitySet="x_time_period">
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_timesheet">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_timesheet">
+        <MappingFragment StoreEntitySet="x_timesheet">
+          <ScalarProperty Name="collected_on" ColumnName="collected_on" />
+          <ScalarProperty Name="sent_on" ColumnName="sent_on" />
+          <ScalarProperty Name="ero_status" ColumnName="ero_status" />
+          <ScalarProperty Name="approved_on" ColumnName="approved_on" />
+          <ScalarProperty Name="submitted_on" ColumnName="submitted_on" />
+          <ScalarProperty Name="user_approval" ColumnName="user_approval" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="end_ot" ColumnName="end_ot" />
+          <ScalarProperty Name="start_ot" ColumnName="start_ot" />
+          <ScalarProperty Name="overtime" ColumnName="overtime" />
+          <ScalarProperty Name="end" ColumnName="end" />
+          <ScalarProperty Name="start" ColumnName="start" />
+          <ScalarProperty Name="timesheet_date" ColumnName="timesheet_date" />
+          <ScalarProperty Name="placement_id" ColumnName="placement_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_timesheet_assessment">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_timesheet_assessment">
+        <MappingFragment StoreEntitySet="x_timesheet_assessment">
+          <ScalarProperty Name="discipline" ColumnName="discipline" />
+          <ScalarProperty Name="competency" ColumnName="competency" />
+          <ScalarProperty Name="target_result" ColumnName="target_result" />
+          <ScalarProperty Name="placement_id" ColumnName="placement_id" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_training">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_training">
+        <MappingFragment StoreEntitySet="x_training">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_training_organizer">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_training_organizer">
+        <MappingFragment StoreEntitySet="x_training_organizer">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_training_type">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_training_type">
+        <MappingFragment StoreEntitySet="x_training_type">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_undangan">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_undangan">
+        <MappingFragment StoreEntitySet="x_undangan">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="other_ro_tro" ColumnName="other_ro_tro" />
+          <ScalarProperty Name="tro" ColumnName="tro" />
+          <ScalarProperty Name="ro" ColumnName="ro" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="invitation_code" ColumnName="invitation_code" />
+          <ScalarProperty Name="invitation_date" ColumnName="invitation_date" />
+          <ScalarProperty Name="schedule_type_id" ColumnName="schedule_type_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_undangan_detail">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_undangan_detail">
+        <MappingFragment StoreEntitySet="x_undangan_detail">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="biodata_id" ColumnName="biodata_id" />
+          <ScalarProperty Name="undangan_id" ColumnName="undangan_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="x_userrole">
+      <EntityTypeMapping TypeName="DBMiniProject208Model.x_userrole">
+        <MappingFragment StoreEntitySet="x_userrole">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="addrbook_id" ColumnName="addrbook_id" />
+          <ScalarProperty Name="is_delete" ColumnName="is_delete" />
+          <ScalarProperty Name="deleted_on" ColumnName="deleted_on" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

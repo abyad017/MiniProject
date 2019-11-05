@@ -1,0 +1,45 @@
+﻿@using (Html.BeginForm("Create", "Keahlian", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6" style="padding-top:6px" ;>
+            <lable for="skill_name"><font size="4px" color="#000066">Nama Keahlian</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="text" id="skill_name" name="skill_name" required oninvalid="this.setCustomValidity('Nama Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="id"><font size="4px" color="#000066">Level Keahlian *</font></label>
+            @Html.DropDownList("skill_level_id", new SelectList(ViewBag.lstKeahlian, "id", "name", "--Pilih--"), new { @class = "form-control", @style = "border-color:#000066;" })
+        </div>
+    </div>
+        <div class="form-group">
+            <lable for="notes"><font size="4px" color="#000066">Catatan</font></lable>
+            <input class="form-control" style="border-color:#000066; width:100% !;" type="text" id="notes" name="notes" required oninvalid="this.setCustomValidity('Catatan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+
+        </div>
+
+        <div class="btn-group" style="padding-left:300px;">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+        </div>
+}
+
+<script>
+    $("#id").change(function () {
+        var level = $("#id").val();
+        //alert("Test "+$("#Kd_Kota").val());
+        level = level.toString();
+        $.ajax({
+            url: '/Keahlian/listKeahlian/',
+            data: { keahlian: level },
+            dataType: 'json',
+            success: function (hasil) {
+                $("#id").empty();
+
+                $("#id").append("<option value= ''>--Pilih--</option>");
+                $.each(hasil, function (Index, hasil) {
+                    $("#id").append("<option value='" + hasil.id + "'>" + hasil.name + "</option>");
+                })
+            }
+        });
+    });
+</script>

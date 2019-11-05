@@ -1,0 +1,21 @@
+﻿@model List<ViewModel.MiniProject208.VMDetailUndangan>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-3" style="float:left; margin:15px 0px 5px 15px;">
+            @item.u_schedule_date.Value.ToString("dd MMMM yyyy"), @item.u_time
+        </div>
+        <div class="col-7" style="float:left; margin:15px 0px;">
+            RO : @item.u_ro           <br />
+            TRO : @item.u_tro         <br />
+            Lokasi : @item.u_location <br />
+            Jenis Jadwal : @item.u_schedule_type
+        </div>
+        <div class="col-1" style="float:left; margin:5px 7px; padding:20px 0px 0px;">
+            <button class="btn btn-noline" title="Hapus Jadwal" id="@item.u_id">
+                <i class="nav-icon fas fa-trash"></i>
+            </button>
+        </div>
+    </div>
+}

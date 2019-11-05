@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = new int();
+    int year = System.DateTime.Now.Year;
+    int tahun = new int();
+    string load = ViewBag.load;
+}
+<div style="width:100%;">
+    <h2>Timesheet </h2>
+    @using (Html.BeginForm("Search", "SendTS", FormMethod.Post, new { id = "idform" }))
+    {
+        <div class="row">
+            
+            <div class="col-md-6">
+                <select id="bulan" name="bulan" class="form-control">
+                    <option value="13">-- Pilih Bulan --</option>
+                    <option value="1">Januari</option>
+                    <option value="2">Februari</option>
+                    <option value="3">Maret</option>
+                    <option value="4">April</option>
+                    <option value="5">Mei</option>
+                    <option value="6">Juni</option>
+                    <option value="7">Juli</option>
+                    <option value="8">Agustus</option>
+                    <option value="9">September</option>
+                    <option value="10">Oktober</option>
+                    <option value="11">November</option>
+                    <option value="12">Desember</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select id="tahun" name="tahun" class="form-control">
+                    <option value="13">-- Pilih Tahun --</option>
+                    @for (i = 0; i < 11; i++)
+                    {
+                        tahun = year - i;
+                        <option value="@tahun">@tahun</option>
+                    }
+                </select>
+            </div>
+        </div>
+    }
+
+
+</div>
+<div style="width:100%">
+    @if (load == "empty" || load == null)
+    {
+        <hr style="border: 2px solid white">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-secondary" disabled> Reset</button>
+                <button type="button" class="btn btn-secondary" disabled> Submit</button>
+            </div>
+        </div>
+    }
+    else
+    {
+        
+        <table class="table table-striped hider">
+            <tr>
+                <th>Status</th>
+                <th>Tanggal</th>
+                <th>Client</th>
+            </tr>
+            @foreach (var item in ViewBag.data)
+            {
+                <tr>
+                    <td>@item.status</td>
+                    <td>@item.timesheet_date</td>
+                    <td>@item.name</td>
+                </tr>
+            }
+        </table>
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-secondary" id="reset"> Reset</button>
+                <button type="button" class="btn btn-secondary" id="send"> Send</button>
+            </div>
+        </div>
+    }
+
+
+
+</div>
+<script>
+        $(document).ready(function () {
+
+            $("#tahun").change(function () {
+                $("#idform").submit();
+            });
+
+            $("#reset").click(function () {
+                window.location.href = '@Url.Action("Index", "SendTS")';
+            });
+        });
+</script>

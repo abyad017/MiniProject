@@ -1,0 +1,77 @@
+﻿<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ModalDeleteLabel" aria-hidden="true" id="ModalDelete">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="width: 420px !important; margin: 1.75em auto;">
+            
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    ...
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top:-25px;">
+                    <span aria-hidden="true" style="color:#fff;">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body" id="idBodyModalDelete">
+                
+                <div class="form-row">
+                    <div style="float:left;">
+                        <img src="~/Content/Keranjang_sampah.png" width="100" height="100" align="left" id="deleteimg" />
+                    </div>
+                    <div style="float:left;">
+                        <font size="3" color="#000066" face="Arial" class="confirm">
+                            Confirmation?
+                        </font>
+                        <br /><br />
+                        <font size="3" color="#ff0000" face="Arial" class="delete" style="font-weight:bold; text-align:center;">
+                            ...
+                        </font>
+                    </div>
+                </div>
+                
+                <div class="btn-group" style="float:right">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" >
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+
+                    <button type="button" class="btn btn-secondary" id="delete" style="background-color:#ff0000; margin-top:-30px;">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".clsBtnDelete").click(function () {
+        var id = $(this).attr('id');
+        var Title = $(this).attr("title");
+        var Confirm = $(this).attr("confirm");
+        var Name = $(this).attr("delete");
+        del_id = id;
+        $("#ModalDelete").modal("show");
+        $(".modal-title").html(Title);
+        $(".confirm").html(Confirm);
+        $(".delete").html(Name);
+    });
+
+    //$("#delete").click(function () {
+    //    var id = del_id;
+    //    $.ajax({
+    //        url: "/Controller/Delete/",
+    //        data: { delete_id: id },
+    //        method: "post",
+    //        success: function (md1) {
+    //            if (md1.Hapus = "Berhasil") {
+    //                window.location.reload(true);
+    //            }
+    //            else
+    //            {
+    //                window.location.reload(false);
+    //            }
+    //        }
+    //    })
+    //});
+</script>

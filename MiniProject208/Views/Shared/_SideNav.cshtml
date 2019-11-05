@@ -1,0 +1,51 @@
+﻿<a href="#Beranda">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Beranda</font>
+    <span></span>
+</a>
+
+<a href="@Url.Action("Index", "Pelamar")">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Pelamar</font>
+</a>
+
+<a href="@Url.Action("Index", "ProsesPelamar")">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Proses Pelamar</font>
+</a>
+
+<a href="#Penjadwalan">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Penjadwalan</font>
+</a>
+
+<a href="#Tes">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Tes</font>
+</a>
+
+<a href="#Bootcamp">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Bootcamp</font>
+</a>
+
+<a href="#Laporan">
+    <i class="fas fa-circle"></i><font size="4"> &nbsp; Laporan</font>
+</a>
+
+<!--Scripts-->
+@*<script>
+    $(document).ready(function () {
+        $(".menu").click(function () {
+            var Page = $(this).attr('page');
+            var Title = $(this).attr('title');
+            $("div").removeClass("in");
+            $("div").removeClass("fade");
+            $("div").removeClass("modal-backdrop");
+            $.ajax({
+                url: "/Pelamar/" + Page,
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModalXl").empty();
+                    $("#idBodyModalXl").html(mdl);
+                    $(".modal-title").html(Title)
+                    $("#ModalXl").modal("show");
+                }
+            });
+        });
+    });
+</script>*@

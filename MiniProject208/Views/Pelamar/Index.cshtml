@@ -1,0 +1,185 @@
+﻿@model List<ViewModel.MiniProject208.VMPelamar>
+@{
+    ViewBag.Title = "Pelamar";
+    var no = 1;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="width:100%;">
+    @using (Html.BeginForm("Search", "Pelamar", FormMethod.Post))
+    {
+        <!--search-->
+        <div class="input-group" style="width:50%; float:left; margin-bottom:20px;">
+            <input class="form-control" name="cari" type="search" placeholder="Cari berdasarkan nama">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-secondary">
+                    Cari
+                </button>
+                <button type="button" style="margin-left:5px" class="btn btn-outline-secondary">
+                    Reset
+                </button>
+            </div>
+        </div>
+    }
+    <!--opsi-->
+    <div style="width:15%; float:right;">
+        <!--Order-->
+        <div style="float:left;">
+            <button id="btnSort" type="button" class="btn btnSort btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-sort"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-header" style="color:#000066; margin-left:-5px;">Order</a>
+                <a class="dropdown-item" href="@Url.Action("OrderDataByAsc", "Religion")">Ascending</a>
+                <a class="dropdown-item" href="@Url.Action("OrderDataByDesc", "Religion")">Descending</a>
+            </div>
+        </div>
+
+        <!--RowPerPage-->
+        <div style="float:left;">
+            <button type="button" class="btn btnRowPage btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-align-justify"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-header" style="color:#000066; margin-left:-5px;">Row per Page</a>
+                @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row10" }))
+                {
+                    <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row10').submit();">
+                        <input type="hidden" id="row" name="row" value="10" />10
+                    </a>
+                }
+
+                @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row20" }))
+                {
+                    <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row20').submit();">
+                        <input type="hidden" id="row" name="row" value="20" />20
+                    </a>
+                }
+
+                @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row30" }))
+                {
+                    <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row30').submit();">
+                        <input type="hidden" id="row" name="row" value="30" />30
+                    </a>
+                }
+
+                @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row40" }))
+                {
+                    <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row40').submit();">
+                        <input type="hidden" id="row" name="row" value="40" />40
+                    </a>
+                }
+
+                @using (Html.BeginForm("RowPerPage", "Religion", FormMethod.Post, new { id = "row50" }))
+                {
+                    <a class="dropdown-item" href="javascript:{}" onclick="document.getElementById('row50').submit();">
+                        <input type="hidden" id="row" name="row" value="50" />50
+                    </a>
+                }
+            </div>
+        </div>
+
+        <!--RowPerPage-->
+        <div style="float:left;">
+            <button type="button" class="btn btn-noline btnCreatePelamar">
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped" style="color:#000066; font-weight:bold;">
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td style="border-top:1px solid #000066;">
+                    @item.fullname
+                    <br />Nama Panggilan    @item.nick_name
+                    <br />Email             @item.email
+                    <br />No. HP            @item.phone_number1
+                    <br />Pendidikan        @item.school_name @item.major
+                </td>
+
+                <td style="border-top:1px solid #000066;">
+                    <button class="btn btn-noline detail" title="Detail Pelamar" id="@item.id" idPelamar="@item.id">
+                        <i class="nav-icon fas fa-search"></i>
+                    </button>
+
+                    <button class="btn btn-noline clsBtnToken" id="@item.id" title="Token">
+                        <i class="nav-icon fas fa-envelope"></i>
+                    </button>
+                </td>
+            </tr>
+            no++;
+        }
+    </tbody>
+
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:700px">
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".btnCreatePelamar").click(function () {
+            var Title = $(this).attr('title');
+            $("div").removeClass("in");
+            $("div").removeClass("fade");
+            $("div").removeClass("modal-backdrop");
+            $.ajax({
+                url: "/Pelamar/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModalXl").empty();
+                    $("#idBodyModalXl").html(mdl);
+                    $(".modal-title").html(Title)
+                    $("#ModalXl").modal("show");
+                }
+            });
+        });
+
+        //detail
+        $(".detail").click(function () {
+            var ID = $(this).attr('idPelamar');
+            var Title = $(this).attr('title');
+            $("div").removeClass("in");
+            $("div").removeClass("fade");
+            $("div").removeClass("modal-backdrop");
+            $.ajax({
+                url: "/Pelamar/Detail",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModalXl").empty();
+                    $("#idBodyModalXl").html(mdl);
+                    $(".modal-title").html(Title)
+                    $(".abc").attr('value', ID);
+                    $("#ModalXl").modal("show");
+                }
+            });
+        });
+
+        //$(".detail").click(function () {
+        //    var Title = $(this).attr('title');
+        //    $("div").removeClass("in");
+        //    $("div").removeClass("fade");
+        //    $("div").removeClass("modal-backdrop");
+        //    $.ajax({
+        //        url: "/Pelamar/Detail",
+        //        method: "get",
+        //        success: function (mdl) {
+        //            $("#idBodyModalXl").empty();
+        //            $("#idBodyModalXl").html(mdl);
+        //            $(".modal-title").html(Title)
+        //            $("#ModalXl").modal("show");
+        //        }
+        //    });
+        //});
+    });
+</script>

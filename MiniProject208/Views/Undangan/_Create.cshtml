@@ -1,0 +1,88 @@
+﻿@model ViewModel.MiniProject208.VMPelamar
+@using (Html.BeginForm("Create", "Undangan", FormMethod.Post, new { id = "idFormSimpanPelamar" }))
+{
+    @*@Html.AntiForgeryToken()*@
+
+    <div class="modal-header" style="background-color:#000066;">
+        <h5 class="modal-title" id="exampleModalLabel"><font color="white">Buat Undangan</font></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form>
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="invitation_date"><font size="2px">Tanggal Undangan</font></label>
+                <input type="date" class="form-control" id="invitation_date" name="invitation_date">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="time"><font size="2px">Jam</font></label>
+                <input type="text" class="form-control" id="time" name="time">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="biodata_id"><font size="2px">Pelamar</font></label>
+                @Html.DropDownList("biodata_id", new SelectList(ViewBag.ListBiodata, "id", "fullname", "--Pilih Pelamar--"), new { @class = "form-control", @id = "biodata_id", @name = "biodata_id" })
+                
+            </div>
+            <div class="form-group col-md-6">
+                <label for="schedule_type_id"><font size="2px">Jenis Undangan</font></label>
+                @Html.DropDownList("schedule_type_id", new SelectList(ViewBag.ListSchedule, "id", "name", "--Pilih Schedule--"), new { @class = "form-control", @id = "schedule_type_id", @name = "schedule_type_id" })
+                
+            </div>
+                        
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="ro"><font size="2px">RO</font></label>
+                @Html.DropDownList("biodata_id", new SelectList(ViewBag.ListBiodata, "id", "nick_name", "--Pilih RO--"), new { @class = "form-control", @id = "ro", @name = "ro" })
+                
+            </div>
+            <div class="form-group col-md-6">
+                <label for="tro"><font size="2px">TRO</font></label>
+                @Html.DropDownList("biodata_id", new SelectList(ViewBag.ListBiodata, "id", "hobby", "--Pilih TRO--"), new { @class = "form-control", @id = "tro", @name = "tro" })
+                
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="other_ro_tro"><font size="2px">RO/RTO Lain</font></label>
+                <input type="text" class="form-control" id="other_ro_tro" name="other_ro_tro">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="location"><font size="2px">Lokasi</font></label>
+                <input type="text" class="form-control" id="location" name="location">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="notes"><font size="2px">Catatan</font></label>
+                <input type="text" class="form-control" id="notes" name="notes">
+            </div>            
+        </div>
+
+        
+
+        <div class="btn-group" style="float:right">
+            @*<input type="reset" style="background-color:#ff6a00" class="btn btn-warning" font size="2" value="Batal">*@
+            <input type="reset" style="background-color:lightblue" class="btn btn-" data-dismiss="modal" font size="2" value="Batal">
+
+            <input type="submit" id="idBtnSave" class="btn btn-secondary " font size="2" value="Simpan">
+        </div>
+
+
+
+        @*<div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" id="idBtnSave" value="Create" class="btn btn-default" />
+                </div>
+            </div>*@
+    </form>
+}
+

@@ -1,0 +1,42 @@
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.pdb
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.dll
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.dll
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.xml
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.csprojResolveAssemblyReference.cache
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.dll
+D:\bootcamp\miniproject208-master\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.pdb
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.csprojResolveAssemblyReference.cache
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.dll
+C:\Users\Dimas\OneDrive\Xsis Academy\Bootcamp\Batch 208 .NET\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.pdb
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.csprojResolveAssemblyReference.cache
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.dll
+C:\Users\Mr. Bagas\Documents\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.pdb
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.dll
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.pdb
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.dll
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.xml
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.csprojResolveAssemblyReference.cache
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.dll
+D:\GitLab 208\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\ViewModel.MiniProject208.pdb
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\bin\Debug\EntityFramework.SqlServer.xml
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.csprojResolveAssemblyReference.cache
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.dll
+D:\Bootcamp\_BackUp\GitLab\MiniProject208\ViewModel.MiniProject208\obj\Debug\ViewModel.MiniProject208.pdb

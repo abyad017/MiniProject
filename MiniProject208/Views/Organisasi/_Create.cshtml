@@ -1,0 +1,87 @@
+﻿@using (Html.BeginForm("Create", "Organisasi", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="name"><font size="2" color="000066" face="Arial">Nama Organisasi *</font></label>
+            <input type="text" class="form-control" id="name" name="name" required oninvalid="this.setCustomValidity('Nama Organisasi Tidak Boleh Kosong')" oninput="setCustomValidity('')"/>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="position"><font size="2" color="000066" face="Arial">Jabatan *</font></label>
+            <input type="text" class="form-control" id="position" name="position" required oninvalid="this.setCustomValidity('Jabatan Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+           
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="entryYear"><font size="2" color="000066" face="Arial">Tahun Masuk *</font></label>
+                <select class="form-control col-md-10" id="year" name="entry_year" required oninvalid="this.setCustomValidity('Tahun Masuk Tidak Boleh Kosong')" oninput="setCustomValidity('')">
+                    <option value=''>--Pilih Tahun--</option>
+                </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exitYear"><font size="2" color="000066" face="Arial">Tahun Keluar *</font></label>
+            <select class="form-control col-md-10" id="year1" name="exit_year" required oninvalid="this.setCustomValidity('Tahun Keluar Tidak Boleh Kosong')" oninput="setCustomValidity('')">
+                <option value=''>--Pilih Tahun--</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="responsibility"><font size="2" color="000066" face="Arial">Tanggung Jawab</font></label>
+        <input type="text" class="form-control" id="responsibility" name="responsibility" />
+    </div>
+    <div class="form-group">
+        <label for="notes"><font size="2" color="000066" face="Arial">Catatan</font></label>
+        <input type="text" class="form-control" id="notes" name="notes" />
+    </div>
+    <br />
+    <br />
+    <div class="btn-group" style="float:right">
+        <button type="button" data-dismiss="modal" style="background-color:#ff6a00;  margin-top:-30px;" class="btn btn-warning" font size="2">
+            <span aria-hidden="true">Batal</span>
+        </button>
+        <input type="submit" class="btn btn-secondary " id="save" font size="2" style="margin-top:-30px;" value="Simpan">
+    </div>
+}
+<script>
+    $(document).ready(function () {
+        var qntYears = 12;
+        var selectYear = $("#year");
+        var selectYear1 = $("#year1");
+        var currentYear = new Date().getFullYear();
+        var currentYear1 = new Date().getFullYear();
+            
+        for (var y = 0; y < qntYears; y++) {
+            let date = new Date(currentYear);
+            var yearElem = document.createElement("option");
+            yearElem.value = currentYear
+            yearElem.textContent = currentYear;
+            selectYear.append(yearElem);
+            currentYear--;
+        }
+        for (var x = 0; x < qntYears; x++) {
+            let date1 = new Date(currentYear1);
+            var yearElem1 = document.createElement("option");
+            yearElem1.value = currentYear1
+            yearElem1.textContent = currentYear1;
+            selectYear1.append(yearElem1);
+            currentYear1--;
+        }
+
+        $("#year1").change(function () {
+            var a = $("#year").val();
+            var b = $("#year1").val();
+            if (b < a) {
+                alert("tahun akhir tidak boleh kecil dari tahun awal");
+            }
+            
+        });
+
+        
+        
+    });
+    
+
+   
+</script>
+
+

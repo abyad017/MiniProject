@@ -1,0 +1,85 @@
+﻿@using (Html.BeginForm("Create", "EmployeeTraining", FormMethod.Post))
+{
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Karyawan *</font></lable>
+            <select class="form-control" name="employee_id" id="employeeid"
+                    required oninvalid="this.setCustomValidity('Nama belum terpilih')"
+                    oninput="this.setCustomValidity('')"
+                    style="color:#090944;">
+                <option value="">- Pilih Karyawan -</option>
+                @foreach (var biodata in ViewBag.lstbiodata)
+                {
+                    <option value="@biodata.id">@biodata.fullname</option>
+
+                }
+            </select>
+
+            <lable for="skill_name"><font size="2px" color="#000066">Penyelenggara</font></lable>
+            <select class="form-control" name="training_organizer_id" id="training_organizerid"
+                    @*required oninvalid="this.setCustomValidity('Penyelenggara belum terpilih')"
+                    oninput="this.setCustomValidity('')"*@
+                    style="color:#090944;">
+                <option value="">- Pilih Penyelenggara -</option>
+                @foreach (var organizer in ViewBag.lsttrainingorganizer)
+                {
+                    <option value="@organizer.id">@organizer.name</option>
+
+                }
+            </select>
+
+            <lable for="skill_name"><font size="2px" color="#000066">Jenis Pelatihan</font></lable>
+            <select class="form-control" name="training_type_id" id="training_typeid"
+                    style="color:#090944;">
+                <option value="">- Pilih Jenis Pelatihan -</option>
+                @foreach (var pelatihan in ViewBag.lsttrainingtype)
+                {
+                    <option value="@pelatihan.id">@pelatihan.name</option>
+
+                }
+            </select>
+
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Pelatihan *</font></lable>
+            <select class="form-control" name="training_id" id="client"
+                    *required oninvalid="this.setCustomValidity('Pelatihan belum terpilih')"
+                    oninput="this.setCustomValidity('')"
+                    style="color:#090944;">
+                <option value="">- Pilih Training -</option>
+                @foreach (var training in ViewBag.lsttraining)
+                {
+                    <option class="form-control" value="@training.id">@training.name</option>
+
+                }
+            </select>
+
+            <lable for="skill_name"><font size="2px" color="#000066">Tgl. Pelatihan</font></lable>
+            <input class="form-control" style="border-color:#000066;" type="date" id="tanggal" name="training_date" />
+
+            <lable for="skill_name"><font size="2px" color="#000066">Jenis Sertifikasi</font></lable>
+            <select class="form-control" name="certification_type_id" id="certification_typeid"
+                    style="color:#090944;">
+                <option value="">- Pilih Jenis Sertifikasi -</option>
+                @foreach (var sertifikasi in ViewBag.lstcertificationtype)
+                {
+                    <option value="@sertifikasi.id">@sertifikasi.name</option>
+
+                }
+            </select>
+        </div>
+    </div>
+
+
+    <div class="btn-group" style="padding-left:300px;">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-secondary" id="btnCreate">Simpan</button>
+    </div>
+}
+
+

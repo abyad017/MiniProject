@@ -1,0 +1,20 @@
+﻿@model Model.MiniProject208.x_religion
+
+@using (Html.BeginForm("EditPost", "Religion", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.id)//untuk mendapatkan id yang tidak di tampilkan di index
+    <div class="form-group">
+        <label for="name">Nama Agama *</label>
+        <input class="form-control" type="text" id="name" name="name" value="@Model.name" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Deskripsi</label>
+        <textarea class="form-control" type="text" id="description" name="description">@Model.description</textarea>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-primary" id="btnCreate">Simpan</button>
+    </div>
+}

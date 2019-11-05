@@ -1,0 +1,107 @@
+﻿<!--Model (Data)-->
+@model List<ViewModel.MiniProject208.VMReligion>
+
+<!--Title-->
+@{
+    ViewBag.Title = "Agama";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Container for Table Feature-->
+<div style="width:100%;">
+    <!--Form Search Data-->
+    @using (Html.BeginForm("Search", "Religion", FormMethod.Post))
+    {
+        <!--Search Data-->
+        @Html.Partial("_TableSearch")
+    }
+   
+    <!--Table Feature (Sort, Row per Page, Add Data)-->
+    @Html.Partial("_TableFeature1")
+
+    <br />
+    <hr class="garis-atas-tabel">
+</div>
+
+<!--Table-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th width="27%">NAMA</th>
+            <th width="60%">DESKRIPSI</th>
+            <th width="13%">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.name</td>
+                <td>@item.description</td>
+                <td>
+                    <!--BEGIN Tabel Options-->
+                    <div class="btn-group">
+                        <button id="btnOpsi" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item clsBtnEdit" href="#" title="Agama" KodeAgama="@item.id">Ubah</a>
+                            <a class="dropdown-item clsBtnDelete" href="#" title="Hapus?" confirm="Anda yakin ingin menghapus agama" delete="@item.name ?" id="@item.id">Hapus</a>
+                        </div>
+                    </div>
+                    <!--END Tabel Options-->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--Modal-->
+@Html.Partial("_ModalSm")
+@Html.Partial("_ModalDelete")
+
+<!--Scripts-->
+<script>
+    $(document).ready(function () {
+        $("#btnCreate").click(function () {
+            var Title = $(this).attr("title");
+            $.ajax({
+                url: "/Religion/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModalSm").empty();
+                    $("#idBodyModalSm").html(mdl);
+                    $(".modal-title").html(Title);
+                    $("#ModalSm").modal("show");
+                }
+            });
+        });
+
+        $("#delete").click(function () {
+            debugger;
+            var id = del_id;
+            $.ajax({
+                url: "/Religion/Delete/",
+                data: { kode: id },
+                method: "post",
+                success: function (md1) {
+                    location.reload(true);
+                }
+            })
+        });
+
+        $(".clsBtnEdit").click(function () {
+            var KodeAgama = $(this).attr('KodeAgama');
+            $.ajax({
+                url: "/Religion/Edit/",
+                data: { Kode: KodeAgama },
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModalSm").empty();
+                    $("#idBodyModalSm").html(mdl);
+                    $("#ModalSm").modal("show");
+                }
+            })
+        });
+    });
+</script>

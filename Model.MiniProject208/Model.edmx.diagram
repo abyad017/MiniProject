@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4c67e8cc574841cf8e3772f93dc36bd2" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_addrbook" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_address" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_biodata" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_catatan" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_certification_type" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_client" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_education_level" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_employee" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_employee_leave" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_employee_training" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_identity_type" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_keahlian" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_leave_name" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_leave_request" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_marital_status" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_menu_access" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_menutree" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_note_type" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_organisasi" Width="1.5" PointX="10.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_placement" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_religion" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_rencana_jadwal" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_rencana_jadwal_detail" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_riwayat_pekerjaan" Width="1.5" PointX="14.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_riwayat_pelatihan" Width="1.5" PointX="4.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_riwayat_pendidikan" Width="1.5" PointX="6.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_role" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_schedule_type" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_sertifikasi" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_skill_level" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_sumber_loker" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_time_period" Width="1.5" PointX="16.75" PointY="15.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_timesheet" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_timesheet_assessment" Width="1.5" PointX="18.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_training" Width="1.5" PointX="8.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_training_organizer" Width="1.5" PointX="10.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_training_type" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_undangan" Width="1.5" PointX="12.75" PointY="18.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_undangan_detail" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="DBMiniProject208Model.x_userrole" Width="1.5" PointX="14.75" PointY="19.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

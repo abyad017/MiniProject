@@ -1,0 +1,341 @@
+﻿
+
+@model List<ViewModel.MiniProject208.VMEmployeeTraining>
+@{
+    ViewBag.Title = "Index";
+    ViewBag.haha = 1;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!--Container for Table Feature-->
+<div style="width:100%;">
+    <!--Form Search Data-->
+    @using (Html.BeginForm("Search", "Religion", FormMethod.Post))
+    {
+        <!--Search Data-->
+        @Html.Partial("_TableSearchET")
+    }
+
+    <!--Table Feature (Sort, Row per Page, Add Data)-->
+    @Html.Partial("_TableFeature1ET")
+
+    <br />
+    <hr class="garis-atas-tabel">
+</div>
+
+
+
+<table align="center" class="table table-striped" style="color:#007bff; font-weight:bold;">
+    <thead>
+        <tr>
+            <th style="padding-bottom:20px; font-size:13px;">KARYAWAN</th>
+            <th style="padding-bottom:20px; font-size:13px;">NAMA TRAINING</thstyle="padding-bottom:20px;>
+            <th style="padding-bottom:20px; font-size:13px;">TGL.TRAINING</th>
+            <th style="padding-bottom:20px; font-size:13px;">PENYELENGGARA</th>
+            <th style="padding-bottom:20px; font-size:13px;">STATUS</th>
+            <th style="padding-bottom:20px; font-size:13px;">#</th>
+        </tr>
+    </thead>
+    <tbody style="border-top:3px solid #000066;">
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.fullname</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.name_trai</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.training_date.Value.ToString("MMMM dd, yyyy")</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.name_to</td>
+                <td style="border-top:1px solid #000066; vertical-align:middle; color:#000066; font-size:13px;">@item.status</td>
+
+                <td style="border-top:1px solid #000066;">
+
+                    <div class="btn-group" role="group">
+                        <button id="btnOpsi" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item clsBtnEdit" id="@item.id">Ubah</a>
+                            <a class="dropdown-item clsBtnPenyelesaian" id="@item.id">Persetujuan</a>
+                            <a class="dropdown-item clsBtnEnd" id="@item.id">Selesai</a>
+                            <a class="dropdown-item clsBtnHidden" id="@item.id">Hapus</a>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+<!-- Modal Create-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="width:500px;">
+            <div class="modal-header" style="background-color:#000066;">
+                <h5 class="modal-title" id="exampleModalLabel" style="color:white; font-size:15px;">Keahlian</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:white; margin-top:-20px;">
+                    <i class="fa fa-window-close"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                <h1> . . .  </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:100%">
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalEditLabel"><font color="ffffff">Hapus Pendidikan?</font></h5>
+            </div>
+            <div class="modal-body" id="idBodyModaledit">
+                <div class="form-row">
+                    <i class="fas fa-trash" style="font-size: 70px; color:#a80000; padding-right: 30px;"></i>
+
+                    <font size="3" color="#a80000" face="Arial">Anda yakin ingin menghapus training ?</font>
+                </div>
+                <br /><br />
+                <div class="btn-group" style="float:right;">
+                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+                    <button type="submit" class="btn btn-secondary " id="delet" yesid=font size="2" style="margin-top:-30px; background-color:#a80000; ">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Persetujuan -->
+@*<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:100%">
+            <div class="modal-header" style="background-color:#000066;">
+                <h5 class="modal-title" id="exampleModalEditLabel"><font color="ffffff">Hapus Pendidikan?</font></h5>
+            </div>
+            <div class="modal-body" id="idBodyModalPenyelesaian">
+                <div class="form-row">
+                    <i class="fas fa-question-circle" style="font-size: 70px; color:#000000; padding-right: 30px;"></i>
+
+                    <font size="3" color="#000066" face="Arial">Anda yakin ingin menyetujui training ?</font>
+                </div>
+                <br /><br />
+                <div class="btn-group" style="float:right;">
+                    <button type="button" data-dismiss="modal"  id="tidak" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+                    <button type="submit" class="btn btn-secondary " id="iya" yesid=font size="2" style="margin-top:-30px; background-color:#000066; ">
+                        <span aria-hidden="true">Ya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<script>
+    $(document).ready(function () {
+        $("#btnCreate").click(function () {
+            $.ajax({
+                url: "/EmployeeTraining/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(mdl);
+                    $("#exampleModal").modal("show");
+                }
+            });
+
+        });
+    });
+
+    $(".clsBtnEdit").click(function () {
+        var id = $(this).attr('id');
+        //debugger;
+        $.ajax({
+            url: "/EmployeeTraining/Edit/",
+            data: { id: id },
+            method: "get",
+            success: function (mdl) {
+                debugger;
+                $("#idBodyModal").empty();
+                $("#idBodyModal").html(mdl);
+                $("#exampleModal").modal("show");
+            }
+        })
+    });
+   
+   
+
+    //$(".clsBtnHidden").click(function () {
+    //    var id = $(this).attr('id');
+    //    //debugger;
+    //    var r = confirm("Yakin Ingin Menghapus "+id+" ?")
+    //    if (r) {
+    //        $.ajax({
+    //            url: "/EmployeeTraining/hiddenPost/",
+    //            data: { id : id },
+    //            method: "Post",
+    //            success: function (mdl) {
+    //                debugger;
+    //                if (mdl.hapus = "Berhasil") {
+    //                    alert("Data Berhasil Dihapus");
+    //                    window.location.reload();
+    //                    //reload browser
+    //                } else if (mdl.hapus = "Gagal") {
+    //                    alert("Data Gagal DiHapus");
+    //                    window.location.reload();
+    //                }
+    //            }
+    //        })
+    //    }
+    //});
+
+    $(document).ready(function () {
+        var iddel = 0;
+        $(".clsBtnHidden").click(function () {
+            var a = $(this).attr('id');
+            iddel = a;
+            debugger;
+            $("#exampleModalEdit").modal("show");
+        });
+        $("#delet").click(function () {
+            var a = iddel;
+            debugger;
+            $.ajax({
+                url: "/EmployeeTraining/hiddenPost/",
+                data: { id: a },
+                method: "post",
+                success: function (md1) {
+                    if (md1.Hapus = "Berhasil") {
+                        window.location.reload();
+                    }
+                    else {
+                        window.location.reload();
+                    }
+                }
+            })
+        });
+    });
+
+  //$(".clsBtnPenyelesaian").click(function () {
+  //          var a = $(this).attr('id');
+  //          var iddel = a;
+  //          //debugger;
+  //          $("#exampleModalPenyelesaian").modal("show");
+  //      });
+  //      $("#iya").click(function () {
+  //          var a = iddel;
+  //          debugger;
+  //          $.ajax({
+  //              url: "/EmployeeTraining/hiddenPost2/",
+  //              data: { id: a },
+  //              method: "post",
+  //              success: function (md1) {
+  //                  if (md1.Hapus = "Berhasil") {
+  //                      window.location.reload();
+  //                  }
+  //                  else {
+  //                      window.location.reload();
+  //                  }
+  //              }
+  //          })
+  //      });
+
+  //      $("#tidak").click(function () {
+  //          var a = iddel;
+  //          debugger;
+  //          $.ajax({
+  //              url: "/EmployeeTraining/hiddenPost3/",
+  //              data: { id: a },
+  //              method: "post",
+  //              success: function (md1) {
+  //                  if (md1.Hapus = "Berhasil") {
+  //                      window.location.reload();
+  //                  }
+  //                  else {
+  //                      window.location.reload();
+  //                  }
+  //              }
+  //          })
+  //      });
+  //  });
+
+
+    $(".clsBtnPenyelesaian").click(function () {
+        var id = $(this).attr('id');
+       // debugger;
+        var r = confirm("Yakin Ingin Mengijinkan " + id + " ?")
+        if (r) {
+            $.ajax({
+                url: "/EmployeeTraining/hiddenPost2/",
+                data: { id: id },
+                method: "Post",
+                success: function (mdl) {
+                    debugger;
+                    if (mdl.hapus = "Berhasil") {
+                        alert("Training Disetujui");
+                        window.location.reload();
+                        //reload browser
+                    } else if (mdl.hapus = "Gagal") {
+                        alert("Training Tidak Disetujui");
+                        window.location.reload();
+                    }
+                }
+            })
+        } else {
+            $.ajax({
+                url: "/EmployeeTraining/hiddenPost3/",
+                data: { id: id },
+                method: "Post",
+                success: function (mdl) {
+                    debugger;
+                    if (mdl.hapus = "Berhasil") {
+                        alert("Training Tidak Disetujui");
+                        window.location.reload();
+                        //reload browser
+                    } else if (mdl.hapus = "Gagal") {
+                        alert("Training Disetujui");
+                        window.location.reload();
+                    }
+                }
+            })
+        }    
+        
+    });
+
+    $(".clsBtnEnd").click(function () {
+        var id = $(this).attr('id');
+        //debugger;
+        var r = confirm("Yakin Ingin Menyelesaikan Training " + id + " ?")
+        if (r) {
+            $.ajax({
+                url: "/EmployeeTraining/hiddenPost4/",
+                data: { id: id },
+                method: "Post",
+                success: function (mdl) {
+                    debugger;
+                    if (mdl.hapus = "Berhasil") {
+                        alert("Training Selesai");
+                        window.location.reload();
+                        //reload browser
+                    } else if (mdl.hapus = "Gagal") {
+                        alert("Training Belum Selesai");
+                        window.location.reload();
+                    }
+                }
+            })
+        }
+    });
+
+
+
+</script>

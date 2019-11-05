@@ -1,0 +1,172 @@
+﻿@model List<Model.MiniProject208.x_riwayat_pekerjaan>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+
+<h2>
+    Pengalaman Kerja
+    <button type="button" class="btn btn-dark" id="btnCreate" data-toggle="modal" data-target="#exampleModal">
+        <i class="fas fa-plus-circle"></i>
+    </button>
+</h2>
+<table class="table">
+    <tr>
+        <th class="col-xs-2">DETAIL PEKERJAAN</th>
+        <th class="col-xs-2">CATATAN</th>
+        <th class="col-xs-2">#</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-xs-2">
+                @item.company_name
+            </td>
+            <td class="col-xs-2">@item.notes</td>
+            <td>
+                <div class="dropdown mr-1">
+                    <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                        More &nabla;
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                        <button class="dropdown-item btn-link clsBtnEdit" editid="@item.id" data-toggle="modal" data-target="#exampleModalEdit">Ubah</button>
+                        <br />
+                        <button class="dropdown-item btn-link clsBtnDelete" delid="@item.id" data-toggle="modal" data-target="#exampleModalDel">Hapus</button>
+                        <br />
+                        <button class="dropdown-item btn-link clsBtnPro" proid="@item.id">Tambah/Ubah Proyek</button>
+
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+    }
+
+
+
+
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#000066">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="ffffff">Tambah</font></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#000066">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="ffffff">Edit</font></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="aBodyModal">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:150%">
+            <div class="modal-header" style="background-color:#ff0000">
+                <h5 class="modal-title" id="exampleModalLabel"><font color="ffffff">Delete</font></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="delBodyModal">
+                <div class="form-row">
+                    <img src="~/Content/Keranjang_sampah.png" width="100" height="100" align="left" id="deleteimg" />
+                    <font size="3" color="000066" face="Arial">Anda yakin ingin menghapus ini?</font>
+                </div>
+                <div class="btn-group" style="float:right">
+                    <button type="button" data-dismiss="modal" style="background-color:#ff6a00" class="btn btn-warning" font size="2">
+                        <span aria-hidden="true">Tidak</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary " id="del" font size="2">
+                        <span aria-hidden="true">Iya</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        var iddel = 0;
+        $("#btnCreate").click(function () {
+            $.ajax({
+                url: "/Riwayat/Create/",
+                method: "get",
+                success: function (md1) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(md1);
+                    $("#exampleModal").modal("show");
+                }
+            })
+        });
+        $(".clsBtnEdit").click(function () {
+            var a = $(this).attr('editid');
+            debugger;
+            $.ajax({
+                url: "/Riwayat/Edit/",
+                data: { editid: a },
+                method: "get",
+                success: function (md1) {
+                    debugger;
+                    $("#aBodyModal").empty();
+                    $("#aBodyModal").html(md1);
+                    $("#exampleModalEdit").modal("show");
+                }
+            })
+        });
+        $(".clsBtnDelete").click(function () {
+            var a = $(this).attr('delid');
+            iddel = a;
+            debugger;
+            $("#exampleModalDel").modal("show");
+        });
+        $("#del").click(function () {
+            var a = iddel;
+            $.ajax({
+                url: "/Riwayat/Delete/",
+                data: { delid: a },
+                method: "post",
+                success: function (mdl) {
+                    if (mdl.Hapus = "Berhasil") {
+                        window.location.reload();
+                    }
+                    else {
+                        window.location.reload();
+                    }
+                }
+
+            })
+        });
+    });
+
+</script>
+
+
+
+
+

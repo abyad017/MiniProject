@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8485E9B4-A510-4D6B-AA5F-CF6C0A2BD026}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repo.MiniProject208</RootNamespace>
+    <AssemblyName>Repo.MiniProject208</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessMenuRepo.cs" />
+    <Compile Include="BiodataRepo.cs" />
+    <Compile Include="EmployeeTrainingRepo.cs" />
+    <Compile Include="KeahlianRepo.cs" />
+    <Compile Include="LeaveRequestRepo.cs" />
+    <Compile Include="OrganisasiRepo.cs" />
+    <Compile Include="PelamarRepo.cs" />
+    <Compile Include="PelatihanRepo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CatatanRepo.cs" />
+    <Compile Include="ProsesPelamarRepo.cs" />
+    <Compile Include="ReligionRepo.cs" />
+    <Compile Include="RescheduleRepo.cs" />
+    <Compile Include="RiwayatPendidikanRepo.cs" />
+    <Compile Include="RiwayatRepo.cs" />
+    <Compile Include="SendTSRepo.cs" />
+    <Compile Include="SertifikasiRepo.cs" />
+    <Compile Include="SumberLokerRepo.cs" />
+    <Compile Include="TimeSheetRepo.cs" />
+    <Compile Include="TimeSheetSubmitRepo.cs" />
+    <Compile Include="TSCollectionRepo.cs" />
+    <Compile Include="UndanganRepo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model.MiniProject208\Model.MiniProject208.csproj">
+      <Project>{d7161a28-77bc-4782-af28-36ffe9f117eb}</Project>
+      <Name>Model.MiniProject208</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel.MiniProject208\ViewModel.MiniProject208.csproj">
+      <Project>{4647db94-df04-4601-9e5d-e50edcb50a0f}</Project>
+      <Name>ViewModel.MiniProject208</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

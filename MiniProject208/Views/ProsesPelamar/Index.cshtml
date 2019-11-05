@@ -1,0 +1,119 @@
+﻿@model List<ViewModel.MiniProject208.VMPelamar>
+@{
+    ViewBag.Title = "Proses Pelamar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--header-->
+<div class="row">
+
+    <!--title-->
+    <div class="col-10" style="float:left;">
+        <font size="5" color="#000066">
+            <b>Proses Pelamar</b>
+        </font>
+    </div>
+    <!--title-->
+    <!--opsi-->
+    <div class="col-2" style="float:right;">
+        <!--RowPerPage-->
+        <div style="float:right;">
+            <button id="btnSort" type="button" class="btn btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-align-justify"></i>
+            </button>
+        </div>
+        <!--RowPerPage-->
+        <!--Order-->
+        <div style="float:right;">
+            <button id="btnSort" type="button" class="btn btnSort btn-noline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-sort"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-header" style="color:#000066; margin-left:-5px;">Order</a>
+                <a class="dropdown-item" href="@Url.Action("OrderDataByAsc", "ProsesPelamar")">Ascending</a>
+                <a class="dropdown-item" href="@Url.Action("OrderDataByDesc", "ProsesPelamar")">Descending</a>
+            </div>
+        </div>
+        <!--Order-->
+    </div>
+    <!--opsi-->
+</div>
+<!--title-->
+<!--table-->
+<table class="table table-striped" style="color:#000066; font-weight:bold;">
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @item.fullname
+                </td>
+
+                <td>
+                    @item.fullname @item.school_name / @item.major
+                </td>
+
+                <td>
+                    @if (item.is_process == false)
+                    {
+                        <button class="btn btnProses" kode="@item.id">
+                            Proses
+                        </button>
+                    }
+                    else if (item.is_process == true)
+                    {
+                        <button class="btn btnDetail" kode="@item.id" title="Detail Proses">
+                            Detail
+                        </button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .modal-header {
+        background-color: #00ffff !important;
+    }
+    .modal-title{
+        color:#000066 !important;
+    }
+</style>
+
+<!-- Modal -->
+@Html.Partial("_ModalLg")
+
+<script>
+    $(".btnProses").click(function () {
+        var Kode = $(this).attr('kode');
+        $.ajax({
+            url: "/ProsesPelamar/Proses/",
+            data: { Kode: Kode },
+            method: "post",
+            success: function (mdl) {
+                if (mdl.CatatanDelete = "Berhasil") {
+                    //alert("Berhasil");
+                    window.location.reload();
+                }
+                else if (mdl.CatatanDelete = "Gagal") {
+                    alert("Gagal");
+                }
+            }
+        })
+    });
+
+    $(".btnDetail").click(function () {
+        var Title = $(this).attr("title");
+        $.ajax({
+            url: "/ProsesPelamar/Detail/",
+            method: "get",
+            success: function (mdl) {
+                $("#idBodyModalLg").empty();
+                $("#idBodyModalLg").html(mdl);
+                $(".modal-title").html(Title);
+                $("#ModalLg").modal("show");
+            }
+        });
+    });
+</script>

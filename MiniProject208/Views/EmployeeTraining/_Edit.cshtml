@@ -1,0 +1,47 @@
+﻿
+@using (Html.BeginForm("Edit", "EmployeeTraining", FormMethod.Post))
+{
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Karyawan *</font></lable>
+            @Html.DropDownList("employee_id", new SelectList(ViewBag.lstbiodata, "id", "fullname", ""),
+                    new { @class = "form-control", @style = "color:#090944;" })
+
+
+            <lable for="skill_name"><font size="2px" color="#000066">Penyelenggara</font></lable>
+            @Html.DropDownList("training_organizer_id", new SelectList(ViewBag.lsttrainingorganizer, "id", "name", ""),
+                    new { @class = "form-control", @style = "color:#090944;" })
+
+            <lable for="skill_name"><font size="2px" color="#000066">Jenis Pelatihan</font></lable>
+            @Html.DropDownList("training_type_id", new SelectList(ViewBag.lsttrainingtype, "id", "name", ""),
+                    new { @class = "form-control", @style = "color:#090944;" })
+
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <lable for="skill_name"><font size="2px" color="#000066">Pelatihan *</font></lable>
+            @Html.DropDownList("training_id", new SelectList(ViewBag.lsttraining, "id", "name", ""),
+                    new { @class = "form-control", @style = "color:#090944;" })
+
+            <lable for="skill_name"><font size="2px" color="#000066">Tgl. Pelatihan</font></lable>
+            <input class="form-control" style="border-color:#000066; color:#090944; " type="date" id="training_date" name="training_date" value="@ViewBag.dt"/>
+
+            <lable for="skill_name"><font size="2px" color="#000066">Jenis Sertifikasi</font></lable>
+            @Html.DropDownList("certification_type_id", new SelectList(ViewBag.lstcertificationtype, "id", "name", ""),
+                    new { @class = "form-control", @style = "color:#090944;" })
+
+        </div>
+    </div>
+
+
+    <div class="btn-group" style="padding-left:300px;">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-secondary">Simpan</button>
+    </div>
+}
+
+

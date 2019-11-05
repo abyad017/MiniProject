@@ -1,0 +1,48 @@
+﻿@model List<Model.MiniProject208.x_sumber_loker>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.hehe = 1;
+}
+<button type="button" id="btnCreate" class="btn btn-noline" style="padding-right:5px; padding-left:5px;">
+    <i class="fas fa-plus-circle" style="font-size:19px;"></i>
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sumber Loker</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="idBodyModal">
+                <form>
+                    <div class="form-group">
+                        . . .
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnCreate").click(function () {
+
+            $.ajax({
+                url: "/SumberLoker/Create/",
+                method: "get",
+                success: function (mdl) {
+                    $("#idBodyModal").empty();
+                    $("#idBodyModal").html(mdl);
+                    $("#exampleModal").modal("show");
+                }
+            });
+
+        });
+    });
+
+</script>
+

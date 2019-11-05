@@ -1,0 +1,175 @@
+﻿@model List<ViewModel.MiniProject208.VMTimesheet>
+@{
+    var str ="Ya";
+}
+@using (Html.BeginForm("CreatePost", "TimeSheet", FormMethod.Post))
+{
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Timesheet</h5>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <br />
+                <label>Status*</label>
+                <select class="form-control" name="status" id="status">
+                    <option value="">-- Pilih Status --</option>
+                    @foreach (var item in ViewBag.status)
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tanggal *</label>
+                <input type="date" class="form-control" name="timesheet_date" id="date"
+                       required oninvalid="this.setCustomValidity('Tanggal belum terisi')"
+                       oninput="this.setCustomValidity('')" />
+            </div>
+            <div class="form-group">
+                <label>Overtime</label>
+                <select class="form-control" name="overtime" id="overtime">
+                    <option value="">-- Ya/Tidak --</option>
+                    @foreach (var item in ViewBag.overtime)
+                    {
+                        if (item == "true")
+                        {
+                            str = "Ya";
+                            <option value="@item"> @str</option>
+                        }
+                        else
+                        {
+                            str = "Tidak";
+                            <option value="@item"> @str</option>
+                        }
+
+                    }
+                </select>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <br />
+            <div class="form-group">
+                <label>Client</label>
+                <select class="form-control" name="placement_id" id="client"
+                        required oninvalid="this.setCustomValidity('overtime belum terpilih')"
+                        oninput="this.setCustomValidity('')">
+                    <option value="">-- Pilih Client --</option>
+                    @foreach (var item in ViewBag.client)
+                    {
+                        <option value="@item.placement_id">@item.name</option>
+                    }
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Jam Kerja *</label>
+                <br />
+                    <input type="text" class="form-control col-md-3" placeholder="Mulai" name="start" id="jamMulai"
+                           required oninvalid="this.setCustomValidity('jam mulai belum terisi')"
+                           oninput="this.setCustomValidity('')" disabled style="float:left" /> 
+       
+                     <input type="text" class="form-control col-md-3" placeholder="selesai" name="end" id="jamSelesai"
+                            required oninvalid="this.setCustomValidity('jam selesai  belum terisi')"
+                            oninput="this.setCustomValidity('')" disabled style="margin-left:15px" /> 
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <label>Jam Overtime</label>
+                <br />
+                <input type="text" class="form-control col-md-3" placeholder="Mulai" name="start_ot" id="jamOtMulai" disabled />
+                <input type="text" class="form-control col-md-3" placeholder="selesai" name="end_ot" id="jamOtSelesai" disabled style="margin-left:15px" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Kegiatan *</label>
+                <textarea rows="4" class="form-control" name="activity"
+                          required oninvalid="this.setCustomValidity('kegiatan belum terisi')"
+                          oninput="this.setCustomValidity('')"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class=" btn btn-warning" data-dismiss="modal" aria-label="Close">Batal</button>
+        <input type="submit" class="btn btn-secondary" id="BtnCreate" value="Simpan" />
+        
+            
+        
+    </div>
+
+}
+
+<script>
+    $(document).ready(function () {
+        //enable jam kerja dan  jam overtime
+        $("#status").change(function () {
+            var x = $("#status").val();
+            if (x == "Masuk") {
+                $("#jamMulai").attr('disabled', false);
+                $("#jamSelesai").attr('disabled', false);
+                $("#jamOtMulai").attr('disabled', false);
+                $("#jamOtSelesai").attr('disabled', false);
+
+            }
+
+            else {
+                $("#jamMulai").attr('disabled', true);
+                $("#jamSelesai").attr('disabled', true);
+                $("#jamOtMulai").attr('disabled', true);
+                $("#jamOtSelesai").attr('disabled', true);
+    
+            }
+
+        });
+        $("#date").change(function () {
+            var x = $("#status").val();
+            if (x == "Masuk") {
+                $("#jamMulai").attr('disabled', false);
+                $("#jamSelesai").attr('disabled', false);
+            }
+            else if (x == "") {
+                $("#jamMulai").attr('disabled', false);
+                $("#jamSelesai").attr('disabled', false);
+            }
+            else {
+                $("#jamMulai").attr('disabled', true);
+                $("#jamSelesai").attr('disabled', true);
+                $("#jamOtMulai").attr('disabled', true);
+                $("#jamOtSelesai").attr('disabled', true);
+           
+            }
+
+        });
+        $("#overtime").change(function () {
+            var x = $("#status").val();
+            var y = $("#overtime").val();
+
+         if (y == "true" && x == "") {
+                $("#jamOtMulai").attr('disabled', false);
+                $("#jamOtSelesai").attr('disabled', false);
+            }
+         else if (y == "true" && x == "Masuk") {
+                $("#jamOtMulai").attr('disabled', false);
+                $("#jamOtSelesai").attr('disabled', false);
+         }
+          
+         
+            else {
+                $("#jamOtMulai").attr('disabled', true);
+                $("#jamOtSelesai").attr('disabled', true);              
+            }
+
+        });
+
+    });
+</script>

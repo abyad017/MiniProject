@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMiniProject208Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DBMiniProject208Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="x_addrbook" EntityType="DBMiniProject208Model.x_addrbook" />
+    <EntitySet Name="x_address" EntityType="DBMiniProject208Model.x_address" />
+    <EntitySet Name="x_biodata" EntityType="DBMiniProject208Model.x_biodata" />
+    <EntitySet Name="x_catatan" EntityType="DBMiniProject208Model.x_catatan" />
+    <EntitySet Name="x_certification_type" EntityType="DBMiniProject208Model.x_certification_type" />
+    <EntitySet Name="x_client" EntityType="DBMiniProject208Model.x_client" />
+    <EntitySet Name="x_education_level" EntityType="DBMiniProject208Model.x_education_level" />
+    <EntitySet Name="x_employee" EntityType="DBMiniProject208Model.x_employee" />
+    <EntitySet Name="x_employee_leave" EntityType="DBMiniProject208Model.x_employee_leave" />
+    <EntitySet Name="x_employee_training" EntityType="DBMiniProject208Model.x_employee_training" />
+    <EntitySet Name="x_identity_type" EntityType="DBMiniProject208Model.x_identity_type" />
+    <EntitySet Name="x_keahlian" EntityType="DBMiniProject208Model.x_keahlian" />
+    <EntitySet Name="x_leave_name" EntityType="DBMiniProject208Model.x_leave_name" />
+    <EntitySet Name="x_leave_request" EntityType="DBMiniProject208Model.x_leave_request" />
+    <EntitySet Name="x_marital_status" EntityType="DBMiniProject208Model.x_marital_status" />
+    <EntitySet Name="x_menu_access" EntityType="DBMiniProject208Model.x_menu_access" />
+    <EntitySet Name="x_menutree" EntityType="DBMiniProject208Model.x_menutree" />
+    <EntitySet Name="x_note_type" EntityType="DBMiniProject208Model.x_note_type" />
+    <EntitySet Name="x_organisasi" EntityType="DBMiniProject208Model.x_organisasi" />
+    <EntitySet Name="x_placement" EntityType="DBMiniProject208Model.x_placement" />
+    <EntitySet Name="x_religion" EntityType="DBMiniProject208Model.x_religion" />
+    <EntitySet Name="x_rencana_jadwal" EntityType="DBMiniProject208Model.x_rencana_jadwal" />
+    <EntitySet Name="x_rencana_jadwal_detail" EntityType="DBMiniProject208Model.x_rencana_jadwal_detail" />
+    <EntitySet Name="x_riwayat_pekerjaan" EntityType="DBMiniProject208Model.x_riwayat_pekerjaan" />
+    <EntitySet Name="x_riwayat_pelatihan" EntityType="DBMiniProject208Model.x_riwayat_pelatihan" />
+    <EntitySet Name="x_riwayat_pendidikan" EntityType="DBMiniProject208Model.x_riwayat_pendidikan" />
+    <EntitySet Name="x_role" EntityType="DBMiniProject208Model.x_role" />
+    <EntitySet Name="x_schedule_type" EntityType="DBMiniProject208Model.x_schedule_type" />
+    <EntitySet Name="x_sertifikasi" EntityType="DBMiniProject208Model.x_sertifikasi" />
+    <EntitySet Name="x_skill_level" EntityType="DBMiniProject208Model.x_skill_level" />
+    <EntitySet Name="x_sumber_loker" EntityType="DBMiniProject208Model.x_sumber_loker" />
+    <EntitySet Name="x_time_period" EntityType="DBMiniProject208Model.x_time_period" />
+    <EntitySet Name="x_timesheet" EntityType="DBMiniProject208Model.x_timesheet" />
+    <EntitySet Name="x_timesheet_assessment" EntityType="DBMiniProject208Model.x_timesheet_assessment" />
+    <EntitySet Name="x_training" EntityType="DBMiniProject208Model.x_training" />
+    <EntitySet Name="x_training_organizer" EntityType="DBMiniProject208Model.x_training_organizer" />
+    <EntitySet Name="x_training_type" EntityType="DBMiniProject208Model.x_training_type" />
+    <EntitySet Name="x_undangan" EntityType="DBMiniProject208Model.x_undangan" />
+    <EntitySet Name="x_undangan_detail" EntityType="DBMiniProject208Model.x_undangan_detail" />
+    <EntitySet Name="x_userrole" EntityType="DBMiniProject208Model.x_userrole" />
+  </EntityContainer>
+  <EntityType Name="x_addrbook">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="is_locked" Type="Boolean" Nullable="false" />
+    <Property Name="attempt" Type="Int16" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="abuid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="abpwd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fp_token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fp_expired_date" Type="DateTime" Precision="3" />
+    <Property Name="fp_counter" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" />
+    <Property Name="biodata_id" Type="Int64" />
+    <Property Name="address1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="postal_code1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rt1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="rw1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="kelurahan1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kecamatan1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="region1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="postal_code2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rt2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="rw2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="kelurahan2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kecamatan2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="region2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_biodata">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" />
+    <Property Name="fullname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="nick_name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pob" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="religion_id" Type="Int64" Nullable="false" />
+    <Property Name="high" Type="Int32" />
+    <Property Name="weights" Type="Int32" />
+    <Property Name="nationality" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ethnic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hobby" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="identity_type_id" Type="Int64" Nullable="false" />
+    <Property Name="identity_no" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="phone_number1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone_number2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="parent_phone_number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="child_sequence" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="how_many_brothers" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="marital_status_id" Type="Int64" Nullable="false" />
+    <Property Name="addrbook_id" Type="Int64" />
+    <Property Name="token" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="expired_token" Type="DateTime" Precision="0" />
+    <Property Name="marriage_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="company_id" Type="Int64" Nullable="false" />
+    <Property Name="is_process" Type="Boolean" />
+    <Property Name="is_complete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="x_catatan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="note_type_id" Type="Int64" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_certification_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_client">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="user_client_name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ero" Type="Int64" Nullable="false" />
+    <Property Name="user_email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_education_level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="is_idle" Type="Boolean" />
+    <Property Name="is_ero" Type="Boolean" />
+    <Property Name="is_user_client" Type="Boolean" />
+    <Property Name="ero_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_employee_leave">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="employee_id" Type="Int64" Nullable="false" />
+    <Property Name="regular_quota" Type="Int32" Nullable="false" />
+    <Property Name="annual_collective_leave" Type="Int32" Nullable="false" />
+    <Property Name="leave_already_taken" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_employee_training">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="employee_id" Type="Int64" Nullable="false" />
+    <Property Name="training_id" Type="Int64" Nullable="false" />
+    <Property Name="training_organizer_id" Type="Int64" />
+    <Property Name="training_date" Type="DateTime" Precision="3" />
+    <Property Name="training_type_id" Type="Int64" />
+    <Property Name="certification_type_id" Type="Int64" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_identity_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_keahlian">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="skill_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="skill_level_id" Type="Int64" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_leave_name">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="leave_type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_leave_request">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="leave_name_id" Type="Int64" />
+    <Property Name="start" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="end_" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="reason" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="leave_contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="leave_address" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_marital_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_menu_access">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menutree_id" Type="Int64" Nullable="false" />
+    <Property Name="role_id" Type="Int64" Nullable="false" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_menutree">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="menu_image_url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="menu_icon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="menu_order" Type="Int32" Nullable="false" />
+    <Property Name="menu_level" Type="Int32" Nullable="false" />
+    <Property Name="menu_parent" Type="Int64" />
+    <Property Name="menu_url" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="menu_type" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_note_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_by" Type="Int64" />
+    <Property Name="modify_on" Type="DateTime" Precision="3" />
+    <Property Name="delete_by" Type="Int64" />
+    <Property Name="delete_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_organisasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="entry_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="exit_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="responsibility" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_placement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="client_id" Type="Int64" Nullable="false" />
+    <Property Name="employee_id" Type="Int64" Nullable="false" />
+    <Property Name="is_placement_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_religion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_rencana_jadwal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="schedule_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="schedule_date" Type="DateTime" Precision="0" />
+    <Property Name="time" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ro" Type="Int64" />
+    <Property Name="tro" Type="Int64" />
+    <Property Name="schedule_type_id" Type="Int64" />
+    <Property Name="location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="other_ro_tro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="is_automatic_mail" Type="Boolean" />
+    <Property Name="sent_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_rencana_jadwal_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="rencana_jadwal_id" Type="Int64" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pekerjaan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="join_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="join_month" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="resign_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="resign_month" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="last_position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="income" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_it_related" Type="Boolean" />
+    <Property Name="about_job" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="exit_reason" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pelatihan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="training_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="organizer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="training_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="training_month" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="training_duration" Type="Int32" />
+    <Property Name="time_period_id" Type="Int64" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_riwayat_pendidikan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="biodata_id" Type="Int64" />
+    <Property Name="school_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="major" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="create_by" Type="Int64" />
+    <Property Name="created_on" Type="DateTime" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="education_level_id" Type="Int64" />
+    <Property Name="entry_year" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="graduation_year" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="gpa" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="judul_ta" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="deskripsi_ta" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="x_role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_schedule_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descripton" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_sertifikasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="certificate_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="publisher" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="valid_start_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="valid_start_month" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="until_year" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="until_month" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_skill_level">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_sumber_loker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="vacancy_source" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="candidate_type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="event_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="career_center_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="referrer_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="referrer_phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="referrer_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="other_source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_income" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="apply_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="x_time_period">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_timesheet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="placement_id" Type="Int64" Nullable="false" />
+    <Property Name="timesheet_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="start" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="end" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="overtime" Type="Boolean" />
+    <Property Name="start_ot" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="end_ot" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="activity" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="user_approval" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="submitted_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="approved_on" Type="DateTime" Precision="3" />
+    <Property Name="ero_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sent_on" Type="DateTime" Precision="3" />
+    <Property Name="collected_on" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="x_timesheet_assessment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="month" Type="Int32" Nullable="false" />
+    <Property Name="placement_id" Type="Int64" Nullable="false" />
+    <Property Name="target_result" Type="Int32" Nullable="false" />
+    <Property Name="competency" Type="Int32" Nullable="false" />
+    <Property Name="discipline" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="x_training">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_training_organizer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_training_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_undangan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="schedule_type_id" Type="Int64" />
+    <Property Name="invitation_date" Type="DateTime" Precision="0" />
+    <Property Name="invitation_code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ro" Type="Int64" />
+    <Property Name="tro" Type="Int64" />
+    <Property Name="other_ro_tro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_undangan_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="undangan_id" Type="Int64" Nullable="false" />
+    <Property Name="biodata_id" Type="Int64" Nullable="false" />
+    <Property Name="notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="x_userrole">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_by" Type="Int64" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int64" />
+    <Property Name="modified_on" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="Int64" />
+    <Property Name="deleted_on" Type="DateTime" Precision="3" />
+    <Property Name="is_delete" Type="Boolean" Nullable="false" />
+    <Property Name="addrbook_id" Type="Int64" Nullable="false" />
+    <Property Name="role_id" Type="Int64" Nullable="false" />
+  </EntityType>
+</Schema>

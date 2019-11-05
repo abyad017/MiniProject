@@ -1,0 +1,88 @@
+﻿@model ViewModel.MiniProject208.VMLeaveRequest
+@using (Html.BeginForm("EditPost", "LeaveRequest", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="leave_type_id"><font size="2" color="000066" face="Arial">Jenis Cuti *</font></label>
+           @Html.DropDownList("leave_name_id", new SelectList(ViewBag.Listx_leave_name, "id", "leave_type", "--Pilih--"), new { @class = "form-control", @id = "leave_name_id" })
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="name"><font size="2" color="000066" face="Arial">Nama Cuti *</font></label>
+            <select id="name" name="name" class="form-control">
+                <option value="@Model.name">--Pilih Nama Cuti--</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="start"><font size="2" color="000066" face="Arial">Mulai Dari (Awal) *</font></label>
+            <input type="date" class="form-control" id="start" name="start" value="@Model.start"/>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="end_"><font size="2" color="000066" face="Arial" hidden>Berakhir Pada (Akhir) *</font></label>
+            <input type="date" class="form-control" id="end_" name="end_" value="@Model.end_"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="reason"><font size="2" color="000066" face="Arial">Alasan Cuti *</font></label>
+            <input type="text" class="form-control" id="reason" name="reason" value="@Model.reason"/>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="leave_contact"><font size="2" color="000066" face="Arial">Kontak Selama Cuti *</font></label>
+            <input type="text" class="form-control" id="leave_contact" name="leave_contact" value="@Model.leave_contact"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="leave_address"><font size="2" color="000066" face="Arial">Alamat Selama Cuti *</font></label>
+        <input type="text" class="form-control" id="leave_address" name="leave_address"  value="@Model.leave_address" required oninvalid="this.setCustomValidity('Alamat Selama Cuti Tidak Boleh Kosong')" oninput="setCustomValidity('')" />
+    </div>
+    
+    <br />
+    <br />
+
+        <div class="btn-group" style="float:right">
+            <button type="button" data-dismiss="modal" style="background-color:#ff6a00; margin-top:-30px;" class="btn btn-warning" font size="2">
+                <span aria-hidden="true">Batal</span>
+            </button>
+            <input type="submit" class="btn btn-secondary " id="save" font size="2" style="margin-top:-30px;" value="Simpan">
+        </div>
+}
+
+<script>
+    $(document).ready(function () {
+
+
+        $("#leave_name_id").change(function () {
+            var a = $("#leave_name_id").val();
+
+            if (a == 4) {
+
+                $("#name").attr('disabled', true);
+            }
+            else {
+                $("#name").attr('disabled', false)
+
+            $.ajax({
+
+                url: '/LeaveRequest/ListNama/',
+                dataType: 'json',
+                success: function (hasil) {
+                    $("#name").empty();
+
+                    $("#name").append("<option value=''>--Pilih Nama Cuti--</option>");
+                    $.each(hasil, function (index, hasil) {
+                        $("#name").append(" <option value='" + hasil.id + "'>" + hasil.name + "</option>");
+                    })
+                }
+            });
+            }
+
+        });
+    });
+</script>
+
